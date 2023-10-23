@@ -1,10 +1,10 @@
-package repository;
+package service;
 
 import domain.menu.ingredient.Ingredient;
 
 import java.util.List;
 
-public class IngredientRepository {
+public class IngredientService {
 
     private List<Ingredient> ingredients;
 }

@@ -1,4 +1,4 @@
-package repository;
+package service;
 
 import domain.logistics.Contract;
 import domain.menu.ingredient.Ingredient;
@@ -6,7 +6,7 @@ import domain.menu.ingredient.Ingredient;
 import java.time.LocalDate;
 import java.util.List;
 
-public class ContractRepository {
+public class ContractService {
     private List<Contract> contracts;
     public List<Contract> findByIngredientAndDate(Ingredient ingredient, LocalDate date) {
         return null;

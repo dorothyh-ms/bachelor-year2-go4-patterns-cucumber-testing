@@ -1,4 +1,4 @@
-package domain;
+package domain.logistics;
 
 import java.time.LocalDate;
 

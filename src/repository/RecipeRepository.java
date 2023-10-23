@@ -1,6 +1,6 @@
 package repository;
 
-import domain.Recipe;
+import domain.menu.recipe.Recipe;
 
 public class RecipeRepository {
     public Recipe findById(int recipeId) {
