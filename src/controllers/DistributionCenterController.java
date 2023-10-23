@@ -1,7 +1,8 @@
 package controllers;
 
 import repository.DistributionCenterRepository;
+import service.DistributionCenterService;
 
 public class DistributionCenterController {
-    private DistributionCenterRepository distributionCenterRepository;
+    private DistributionCenterService service;
 }

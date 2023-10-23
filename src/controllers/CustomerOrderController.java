@@ -1,9 +1,10 @@
 package controllers;
 
 import domain.sales.order.CustomerOrder;
+import service.CustomerOrderService;
 
 import java.util.List;
 
 public class CustomerOrderController {
-    private List<CustomerOrder> customerOrders;
+private CustomerOrderService service;
 }

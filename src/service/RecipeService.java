@@ -1,9 +1,8 @@
 package service;
 
 import domain.menu.recipe.Recipe;
+import repository.RecipeRepository;
 
 public class RecipeService {
-    public Recipe findById(int recipeId) {
-        return null;
-    }
+    private RecipeRepository repository;
 }
