@@ -1,6 +1,6 @@
 package domain.logistics;
 
-import domain.quantity.Quantity;
+import domain.menu.ingredient.Quantity;
 import domain.menu.ingredient.Ingredient;
 
 import java.util.List;

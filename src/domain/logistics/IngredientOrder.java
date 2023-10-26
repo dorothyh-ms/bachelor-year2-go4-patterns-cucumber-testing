@@ -1,7 +1,7 @@
 package domain.logistics;
 
 import domain.delivery.OrderStatus;
-import domain.quantity.Quantity;
+import domain.menu.ingredient.Quantity;
 
 public class IngredientOrder {
     private Contract contract;

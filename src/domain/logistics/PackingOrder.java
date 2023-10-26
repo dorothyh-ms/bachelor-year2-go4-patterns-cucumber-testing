@@ -5,4 +5,6 @@ import domain.sales.order.CustomerOrder;
 public class PackingOrder {
     private CustomerOrder order;
     private PackingStatus status;
+
+    private DistributionCenter distributionCenter;
 }

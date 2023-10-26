@@ -1,10 +1,4 @@
 package repository;
 
-import domain.menu.ingredient.Ingredient;
-
-import java.util.List;
-
-public class IngredientRepository {
-
-    private List<Ingredient> ingredients;
+public interface IngredientRepository {
 }

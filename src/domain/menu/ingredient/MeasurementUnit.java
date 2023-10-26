@@ -1,4 +1,4 @@
-package domain.quantity;
+package domain.menu.ingredient;
 
 public enum MeasurementUnit {
     GRAM,

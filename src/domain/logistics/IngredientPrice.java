@@ -1,6 +1,6 @@
 package domain.logistics;
 
-import domain.quantity.MeasurementUnit;
+import domain.menu.ingredient.MeasurementUnit;
 
 public record IngredientPrice(double moneyAmount, MeasurementUnit unit) {
 }
