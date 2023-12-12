@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hifresh.RunCucumberTest" tests="6" skipped="0" failures="4" errors="0" timestamp="2023-12-12T22:05:02" hostname="DORA-LAPTOP" time="2.241">
+  <properties/>
+  <testcase name="Add a recipe - Add recipe" classname="hifresh.RunCucumberTest" time="1.992">
+    <failure message="org.opentest4j.AssertionFailedError: recipe should have 5 steps but has 0 ==&gt; expected: &lt;5&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: recipe should have 5 steps but has 0 ==&gt; expected: &lt;5&gt; but was: &lt;0&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:560)
+	at app//hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(AddRecipeSteps.java:181)
+	at ✽.recipe 5 should have 2 ingredients and 5 preparation steps(classpath:hifresh/AddRecipe.feature:107)
+</failure>
+  </testcase>
+  <testcase name="Add a recipe - Add recipe with subrecipe" classname="hifresh.RunCucumberTest" time="0.105">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'I append a preparation step  to recipe 6 with description &quot;Boil the spaghetti&quot;' and 4 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;I append a preparation step  to recipe {int} with description {string}&quot;)&#10;public void i_append_a_preparation_step_to_recipe_with_description(Integer int1, String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'I append a preparation step  to recipe 6 with description &quot;Boil the spaghetti&quot;' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;I append a preparation step  to recipe {int} with description {string}&quot;)
+public void i_append_a_preparation_step_to_recipe_with_description(Integer int1, String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at app//io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at app//io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:114)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at app//org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at app//org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128)
+	at app//org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base@17/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@17/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base@17/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base@17/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@17/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base@17/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@17/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at app//org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base@17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="Add a recipe - Add a step to a recipe" classname="hifresh.RunCucumberTest" time="0.036"/>
+  <testcase name="Add a recipe - Insert a step into a recipe" classname="hifresh.RunCucumberTest" time="0.025"/>
+  <testcase name="Calculate cost of a recipe - Calculate price of a recipe on a given date  #DONE see calculaterecipecost.xslx" classname="hifresh.RunCucumberTest" time="0.037">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'clauses' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;clauses&quot;)&#10;public void clauses(io.cucumber.datatable.DataTable dataTable) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    // For automatic transformation, change DataTable to one of&#10;    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or&#10;    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,&#10;    // Double, Byte, Short, Long, BigInteger or BigDecimal.&#10;    //&#10;    // For other transformations you can register a DataTableType.&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;the date is {int}-{int}-{int}&quot;)&#10;public void the_date_is(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'clauses' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;clauses&quot;)
+public void clauses(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
+    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@Given(&quot;the date is {int}-{int}-{int}&quot;)
+public void the_date_is(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at app//io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at app//io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:114)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at app//org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at app//org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128)
+	at app//org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base@17/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@17/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base@17/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base@17/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@17/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base@17/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@17/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at app//org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base@17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="Calculate cost of a recipe - Calculate the price of a recipe with a subrecipe on a given date # MVP: suppose subrecipe is of exact quantity needed" classname="hifresh.RunCucumberTest" time="0.04">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'clauses' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;clauses&quot;)&#10;public void clauses(io.cucumber.datatable.DataTable dataTable) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    // For automatic transformation, change DataTable to one of&#10;    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or&#10;    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,&#10;    // Double, Byte, Short, Long, BigInteger or BigDecimal.&#10;    //&#10;    // For other transformations you can register a DataTableType.&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;the date is {int}-{int}-{int}&quot;)&#10;public void the_date_is(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'clauses' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;clauses&quot;)
+public void clauses(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
+    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@Given(&quot;the date is {int}-{int}-{int}&quot;)
+public void the_date_is(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at app//io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at app//io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:114)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at app//org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at app//org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128)
+	at app//org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base@17/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@17/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base@17/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base@17/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@17/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base@17/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base@17/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@17/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at app//org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base@17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[23:05:03.066 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:05:03.171 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2023-12-12T23:05:03.529+01:00  INFO 8000 --- [    Test worker] hifresh.AddRecipeSteps                   : Starting AddRecipeSteps using Java 17 with PID 8000 (started by Dora Sperling in C:\Users\Dora Sperling\IdeaProjects\programming4\HiFresh)
+2023-12-12T23:05:03.530+01:00  INFO 8000 --- [    Test worker] hifresh.AddRecipeSteps                   : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T23:05:04.074+01:00  INFO 8000 --- [    Test worker] hifresh.AddRecipeSteps                   : Started AddRecipeSteps in 0.792 seconds (process running for 2.497)
+
+Scenario: Add recipe                                                                                                                                                                    ?[90m# hifresh/AddRecipe.feature:98?[0m
+  ?[32mGiven ?[0m?[32mrecipes?[0m                                                                                                                                                                         ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | recipe_name    | recipe_description           |
+    | 1         | pancakes       | Gorgeous pancakes            |
+    | 2         | Pizza          | Deep pan pizza               |
+    | 3         | Cheese Sauce   | Cheesy Sauce                 |
+    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
+  ?[32mGiven ?[0m?[32msubrecipes?[0m                                                                                                                                                                      ?[90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | subrecipe |
+    | 3         | 4         |
+  ?[32mGiven ?[0m?[32mproducts?[0m                                                                                                                                                                        ?[90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)?[0m
+    | product_id | product_name       |
+    | 1          | flour              |
+    | 2          | milk               |
+    | 3          | cheese             |
+    | 4          | self-raising flour |
+    | 5          | tomatoes           |
+    | 6          | beef mince         |
+    | 7          | spaghetti          |
+    | 8          | ham                |
+  ?[32mGiven ?[0m?[32mingredients?[0m                                                                                                                                                                     ?[90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)?[0m
+    | ingredient_id | product_id | recipe_id | quantity | unit      |
+    | 1             | 1          | 1         | 100      | GRAM      |
+    | 3             | 3          | 2         | 20       | GRAM      |
+    | 4             | 3          | 3         | 20       | GRAM      |
+    | 5             | 3          | 4         | 40       | GRAM      |
+    | 6             | 2          | 4         | 600      | MILILITRE |
+  ?[32mGiven ?[0m?[32msteps?[0m                                                                                                                                                                           ?[90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)?[0m
+    | step_id | description                              | recipe_id | order |
+    | 1       | step 1                                   | 1         | 1     |
+    | 2       | step 2                                   | 1         | 2     |
+    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
+    | 4       | Heat gently for 5 minutes                | 3         | 2     |
+    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
+  ?[32mGiven ?[0m?[32mdistributioncentres?[0m                                                                                                                                                             ?[90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)?[0m
+    | distributioncentre_id | distributioncentre_name |
+    | 1                     | DC1                     |
+    | 2                     | DC2                     |
+  ?[32mGiven ?[0m?[32mcontracts?[0m                                                                                                                                                                       ?[90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)?[0m
+    | contract_id | product_id | supplier_id | distributioncentre_id |
+    | 1           | 1          | 1           | 1                     |
+    | 2           | 1          | 2           | 2                     |
+    | 3           | 2          | 1           | 1                     |
+    | 4           | 2          | 2           | 2                     |
+    | 5           | 3          | 1           | 1                     |
+    | 6           | 3          | 2           | 2                     |
+  ?[32mWhen ?[0m?[32mI add recipe ?[0m?[32m?[1m5?[0m?[32m with name ?[0m?[32m?[1m"bolognese sauce"?[0m                                                                                                                                       ?[90m# hifresh.AddRecipeSteps.iAddRecipeWithName(int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI add ingredient ?[0m?[32m?[1m500?[0m?[32m grammes ?[0m?[32m?[1m"tomatoes"?[0m?[32m to recipe ?[0m?[32m?[1m5?[0m                                                                                                                               ?[90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)?[0m
+  ?[32mAnd ?[0m?[32mI add ingredient ?[0m?[32m?[1m250?[0m?[32m grammes ?[0m?[32m?[1m"beef mince"?[0m?[32m to recipe ?[0m?[32m?[1m5?[0m                                                                                                                             ?[90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)?[0m
+  ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m5?[0m?[32m with description ?[0m?[32m?[1m"Put a large saucepan on a medium heat and add 1 tbsp olive oil"?[0m                                                         ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m5?[0m?[32m with description ?[0m?[32m?[1m"Increase the heat to medium-high, add the beef mince and cook stirring for 3-4 mins until the meat is browned all over"?[0m ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m5?[0m?[32m with description ?[0m?[32m?[1m"Chop the tomatoes"?[0m                                                                                                      ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m5?[0m?[32m with description ?[0m?[32m?[1m"Add the tomatoes, Cook for a few minutes"?[0m                                                                               ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m5?[0m?[32m with description ?[0m?[32m?[1m"Season with salt and black pepper to taste"?[0m                                                                             ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
+  ?[31mThen ?[0m?[31mrecipe ?[0m?[31m?[1m5?[0m?[31m should have ?[0m?[31m?[1m2?[0m?[31m ingredients and ?[0m?[31m?[1m5?[0m?[31m preparation steps?[0m                                                                                                                       ?[90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(int,int,int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: recipe should have 5 steps but has 0 ==> expected: <5> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:560)
+	at hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(AddRecipeSteps.java:181)
+	at âœ½.recipe 5 should have 2 ingredients and 5 preparation steps(classpath:hifresh/AddRecipe.feature:107)
+?[0m
+  ?[36mAnd ?[0m?[36mpreparation step ?[0m?[36m?[1m3?[0m?[36m is ?[0m?[36m?[1m"Chop the tomatoes."?[0m                                                                                                                                        ?[90m# hifresh.AddRecipeSteps.preparationStepIs(int,java.lang.String)?[0m
+2023-12-12T23:05:04.915+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-12T23:05:04.916+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+
+Scenario: Add recipe with subrecipe                                                                                                          ?[90m# hifresh/AddRecipe.feature:129?[0m
+  ?[32mGiven ?[0m?[32mrecipes?[0m                                                                                                                              ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | recipe_name    | recipe_description           |
+    | 1         | pancakes       | Gorgeous pancakes            |
+    | 2         | Pizza          | Deep pan pizza               |
+    | 3         | Cheese Sauce   | Cheesy Sauce                 |
+    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
+  ?[32mGiven ?[0m?[32msubrecipes?[0m                                                                                                                           ?[90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | subrecipe |
+    | 3         | 4         |
+  ?[32mGiven ?[0m?[32mproducts?[0m                                                                                                                             ?[90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)?[0m
+    | product_id | product_name       |
+    | 1          | flour              |
+    | 2          | milk               |
+    | 3          | cheese             |
+    | 4          | self-raising flour |
+    | 5          | tomatoes           |
+    | 6          | beef mince         |
+    | 7          | spaghetti          |
+    | 8          | ham                |
+  ?[32mGiven ?[0m?[32mingredients?[0m                                                                                                                          ?[90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)?[0m
+    | ingredient_id | product_id | recipe_id | quantity | unit      |
+    | 1             | 1          | 1         | 100      | GRAM      |
+    | 3             | 3          | 2         | 20       | GRAM      |
+    | 4             | 3          | 3         | 20       | GRAM      |
+    | 5             | 3          | 4         | 40       | GRAM      |
+    | 6             | 2          | 4         | 600      | MILILITRE |
+  ?[32mGiven ?[0m?[32msteps?[0m                                                                                                                                ?[90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)?[0m
+    | step_id | description                              | recipe_id | order |
+    | 1       | step 1                                   | 1         | 1     |
+    | 2       | step 2                                   | 1         | 2     |
+    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
+    | 4       | Heat gently for 5 minutes                | 3         | 2     |
+    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
+  ?[32mGiven ?[0m?[32mdistributioncentres?[0m                                                                                                                  ?[90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)?[0m
+    | distributioncentre_id | distributioncentre_name |
+    | 1                     | DC1                     |
+    | 2                     | DC2                     |
+  ?[32mGiven ?[0m?[32mcontracts?[0m                                                                                                                            ?[90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)?[0m
+    | contract_id | product_id | supplier_id | distributioncentre_id |
+    | 1           | 1          | 1           | 1                     |
+    | 2           | 1          | 2           | 2                     |
+    | 3           | 2          | 1           | 1                     |
+    | 4           | 2          | 2           | 2                     |
+    | 5           | 3          | 1           | 1                     |
+    | 6           | 3          | 2           | 2                     |
+  ?[32mWhen ?[0m?[32mI add recipe ?[0m?[32m?[1m6?[0m?[32m with name ?[0m?[32m?[1m"Baked spaghetti alla carbonara"?[0m                                                                             ?[90m# hifresh.AddRecipeSteps.iAddRecipeWithName(int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI add ingredient ?[0m?[32m?[1m500?[0m?[32m grammes ?[0m?[32m?[1m"tomatoes"?[0m?[32m to recipe ?[0m?[32m?[1m6?[0m                                                                                    ?[90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)?[0m
+  ?[32mAnd ?[0m?[32mI add ingredient ?[0m?[32m?[1m200?[0m?[32m grammes ?[0m?[32m?[1m"spaghettti"?[0m?[32m to recipe ?[0m?[32m?[1m6?[0m                                                                                  ?[90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)?[0m
+  ?[32mAnd ?[0m?[32mI add ingredient ?[0m?[32m?[1m50?[0m?[32m grammes ?[0m?[32m?[1m"cheese"?[0m?[32m to recipe ?[0m?[32m?[1m6?[0m                                                                                       ?[90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)?[0m
+  ?[32mAnd ?[0m?[32mI add subrecipe ?[0m?[32m?[1m3?[0m?[32m to recipe ?[0m?[32m?[1m6?[0m                                                                                                          ?[90m# hifresh.AddRecipeSteps.iAddSubrecipeToRecipe(int,int)?[0m
+  ?[33mAnd ?[0m?[33mI append a preparation step  to recipe 6 with description "Boil the spaghetti"?[0m
+  ?[36mAnd ?[0m?[36mI append a preparation step  to recipe 6 with description "Heat the oven to 180Â°C"?[0m
+  ?[36mAnd ?[0m?[36mI append a preparation step  to recipe 6 with description "Add the spagghetti to an ovendish and top it with the ham and cheese sauce"?[0m
+  ?[36mAnd ?[0m?[36mI append a preparation step  to recipe 6 with description "Grate the cheese and sprinkle it over the spaghetti"?[0m
+  ?[36mAnd ?[0m?[36mI append a preparation step  to recipe 6 with description "Put in the oven for 10 minutes"?[0m
+  ?[36mThen ?[0m?[36mrecipe ?[0m?[36m?[1m6?[0m?[36m should have ?[0m?[36m?[1m3?[0m?[36m ingredients and ?[0m?[36m?[1m5?[0m?[36m preparation steps and ?[0m?[36m?[1m1?[0m?[36m subrecipe?[0m                                                            ?[90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationStepsAndSubrecipe(int,int,int,int)?[0m
+2023-12-12T23:05:05.022+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-12T23:05:05.024+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+
+Scenario: Add a step to a recipe                            ?[90m# hifresh/AddRecipe.feature:146?[0m
+  ?[32mGiven ?[0m?[32mrecipes?[0m                                             ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | recipe_name    | recipe_description           |
+    | 1         | pancakes       | Gorgeous pancakes            |
+    | 2         | Pizza          | Deep pan pizza               |
+    | 3         | Cheese Sauce   | Cheesy Sauce                 |
+    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
+  ?[32mGiven ?[0m?[32msubrecipes?[0m                                          ?[90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | subrecipe |
+    | 3         | 4         |
+  ?[32mGiven ?[0m?[32mproducts?[0m                                            ?[90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)?[0m
+    | product_id | product_name       |
+    | 1          | flour              |
+    | 2          | milk               |
+    | 3          | cheese             |
+    | 4          | self-raising flour |
+    | 5          | tomatoes           |
+    | 6          | beef mince         |
+    | 7          | spaghetti          |
+    | 8          | ham                |
+  ?[32mGiven ?[0m?[32mingredients?[0m                                         ?[90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)?[0m
+    | ingredient_id | product_id | recipe_id | quantity | unit      |
+    | 1             | 1          | 1         | 100      | GRAM      |
+    | 3             | 3          | 2         | 20       | GRAM      |
+    | 4             | 3          | 3         | 20       | GRAM      |
+    | 5             | 3          | 4         | 40       | GRAM      |
+    | 6             | 2          | 4         | 600      | MILILITRE |
+  ?[32mGiven ?[0m?[32msteps?[0m                                               ?[90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)?[0m
+    | step_id | description                              | recipe_id | order |
+    | 1       | step 1                                   | 1         | 1     |
+    | 2       | step 2                                   | 1         | 2     |
+    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
+    | 4       | Heat gently for 5 minutes                | 3         | 2     |
+    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
+  ?[32mGiven ?[0m?[32mdistributioncentres?[0m                                 ?[90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)?[0m
+    | distributioncentre_id | distributioncentre_name |
+    | 1                     | DC1                     |
+    | 2                     | DC2                     |
+  ?[32mGiven ?[0m?[32mcontracts?[0m                                           ?[90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)?[0m
+    | contract_id | product_id | supplier_id | distributioncentre_id |
+    | 1           | 1          | 1           | 1                     |
+    | 2           | 1          | 2           | 2                     |
+    | 3           | 2          | 1           | 1                     |
+    | 4           | 2          | 2           | 2                     |
+    | 5           | 3          | 1           | 1                     |
+    | 6           | 3          | 2           | 2                     |
+  ?[32mWhen ?[0m?[32mi add a step ?[0m?[32m?[1m"Serve hot"?[0m?[32m to recipe ?[0m?[32m?[1m1?[0m                 ?[90m# hifresh.AddRecipeSteps.iAddAStepToRecipe(java.lang.String,int)?[0m
+  ?[32mThen ?[0m?[32mthe recipe has ?[0m?[32m?[1m3?[0m?[32m steps?[0m                               ?[90m# hifresh.AddRecipeSteps.theRecipeHasSteps(int)?[0m
+  ?[32mAnd ?[0m?[32mthe last step of recipe ?[0m?[32m?[1m1?[0m?[32m has description ?[0m?[32m?[1m"Serve hot"?[0m ?[90m# hifresh.AddRecipeSteps.theLastStepOfRecipeHasDescription(int,java.lang.String)?[0m
+2023-12-12T23:05:05.057+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-12T23:05:05.061+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+
+Scenario: Insert a step into a recipe                               ?[90m# hifresh/AddRecipe.feature:151?[0m
+  ?[32mGiven ?[0m?[32mrecipes?[0m                                                     ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | recipe_name    | recipe_description           |
+    | 1         | pancakes       | Gorgeous pancakes            |
+    | 2         | Pizza          | Deep pan pizza               |
+    | 3         | Cheese Sauce   | Cheesy Sauce                 |
+    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
+  ?[32mGiven ?[0m?[32msubrecipes?[0m                                                  ?[90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | subrecipe |
+    | 3         | 4         |
+  ?[32mGiven ?[0m?[32mproducts?[0m                                                    ?[90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)?[0m
+    | product_id | product_name       |
+    | 1          | flour              |
+    | 2          | milk               |
+    | 3          | cheese             |
+    | 4          | self-raising flour |
+    | 5          | tomatoes           |
+    | 6          | beef mince         |
+    | 7          | spaghetti          |
+    | 8          | ham                |
+  ?[32mGiven ?[0m?[32mingredients?[0m                                                 ?[90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)?[0m
+    | ingredient_id | product_id | recipe_id | quantity | unit      |
+    | 1             | 1          | 1         | 100      | GRAM      |
+    | 3             | 3          | 2         | 20       | GRAM      |
+    | 4             | 3          | 3         | 20       | GRAM      |
+    | 5             | 3          | 4         | 40       | GRAM      |
+    | 6             | 2          | 4         | 600      | MILILITRE |
+  ?[32mGiven ?[0m?[32msteps?[0m                                                       ?[90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)?[0m
+    | step_id | description                              | recipe_id | order |
+    | 1       | step 1                                   | 1         | 1     |
+    | 2       | step 2                                   | 1         | 2     |
+    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
+    | 4       | Heat gently for 5 minutes                | 3         | 2     |
+    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
+  ?[32mGiven ?[0m?[32mdistributioncentres?[0m                                         ?[90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)?[0m
+    | distributioncentre_id | distributioncentre_name |
+    | 1                     | DC1                     |
+    | 2                     | DC2                     |
+  ?[32mGiven ?[0m?[32mcontracts?[0m                                                   ?[90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)?[0m
+    | contract_id | product_id | supplier_id | distributioncentre_id |
+    | 1           | 1          | 1           | 1                     |
+    | 2           | 1          | 2           | 2                     |
+    | 3           | 2          | 1           | 1                     |
+    | 4           | 2          | 2           | 2                     |
+    | 5           | 3          | 1           | 1                     |
+    | 6           | 3          | 2           | 2                     |
+  ?[32mWhen ?[0m?[32mI add a step  ?[0m?[32m?[1m"Grate the cheese"?[0m?[32m to recipe ?[0m?[32m?[1m3?[0m?[32m before step ?[0m?[32m?[1m1?[0m   ?[90m# hifresh.AddRecipeSteps.iAddAStepToRecipeBeforeStep(java.lang.String,int,int)?[0m
+  ?[32mThen ?[0m?[32mthe recipe has ?[0m?[32m?[1m3?[0m?[32m steps?[0m                                       ?[90m# hifresh.AddRecipeSteps.theRecipeHasSteps(int)?[0m
+  ?[32mAnd ?[0m?[32mstep ?[0m?[32m?[1m1?[0m?[32m for recipe ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Grate the cheese"?[0m                     ?[90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mstep ?[0m?[32m?[1m2?[0m?[32m for recipe ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Add the cheese to the bechamel sauce"?[0m ?[90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mstep ?[0m?[32m?[1m3?[0m?[32m for recipe ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Heat gently for 5 minutes"?[0m            ?[90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)?[0m
+2023-12-12T23:05:05.085+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-12T23:05:05.090+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+
+Scenario: Calculate price of a recipe on a given date  #DONE see calculaterecipecost.xslx ?[90m# hifresh/CalculateCostOfARecipe.feature:80?[0m
+  ?[32mGiven ?[0m?[32mrecipes?[0m                                                                           ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | recipe_name    | recipe_description           |
+    | 1         | pancakes       | Gorgeous pancakes            |
+    | 2         | Pizza          | Deep pan pizza               |
+    | 3         | Cheese Sauce   | Cheesy Sauce                 |
+    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
+  ?[32mGiven ?[0m?[32msubrecipes?[0m                                                                        ?[90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | subrecipe |
+    | 3         | 4         |
+  ?[32mGiven ?[0m?[32mproducts?[0m                                                                          ?[90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)?[0m
+    | product_id | product_name       |
+    | 1          | flour              |
+    | 2          | milk               |
+    | 3          | cheese             |
+    | 4          | self-raising flour |
+  ?[32mGiven ?[0m?[32mingredients?[0m                                                                       ?[90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)?[0m
+    | ingredient_id | product_id | recipe_id | quantity | unit      |
+    | 1             | 1          | 1         | 100      | GRAM      |
+    | 3             | 3          | 2         | 20       | GRAM      |
+    | 4             | 3          | 3         | 20       | GRAM      |
+    | 5             | 3          | 4         | 40       | GRAM      |
+    | 6             | 2          | 4         | 600      | MILILITRE |
+  ?[32mGiven ?[0m?[32msteps?[0m                                                                             ?[90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)?[0m
+    | step_id | description                              | recipe_id | order |
+    | 1       | step 1                                   | 1         | 1     |
+    | 2       | step 2                                   | 1         | 2     |
+    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
+    | 4       | Heat gently for 5 minutes                | 3         | 2     |
+    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
+  ?[32mGiven ?[0m?[32mdistributioncentres?[0m                                                               ?[90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)?[0m
+    | distributioncentre_id | distributioncentre_name |
+    | 1                     | DC1                     |
+    | 2                     | DC2                     |
+  ?[32mGiven ?[0m?[32mcontracts?[0m                                                                         ?[90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)?[0m
+    | contract_id | product_id | supplier_id | distributioncentre_id |
+    | 1           | 1          | 1           | 1                     |
+    | 2           | 1          | 2           | 2                     |
+    | 3           | 2          | 1           | 1                     |
+    | 4           | 2          | 2           | 2                     |
+    | 5           | 3          | 1           | 1                     |
+    | 6           | 3          | 2           | 2                     |
+  ?[33mGiven ?[0m?[33mclauses?[0m
+    | clause_id | contract_id | price   | maxQuantity | unit      | start_date | end_date   |
+    | 1         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 2         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 3         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 4         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 5         | 3           | 0.0015  | 100000      | MILILITRE | 2024-01-01 | 2024-01-31 |
+    | 6         | 4           | 0.00135 | 80000       | MILILITRE | 2024-01-01 | 2024-01-31 |
+    | 7         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 8         | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 9         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 10        | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 11        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 12        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 13        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 14        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 15        | 5           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 16        | 6           | 0.00135 | 100000      | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 17        | 5           | 0.0014  | 80000       | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 18        | 6           | 0.00145 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+  ?[36mGiven ?[0m?[36mthe date is 2024-03-15?[0m
+  ?[36mThen ?[0m?[36mthe average cost of recipe ?[0m?[36m?[1m4?[0m?[36m is ?[0m?[36m?[1m0.9153333?[0m                                          ?[90m# hifresh.CalculateCostOfARecipeSteps.theAverageCostOfRecipeIs(int,double)?[0m
+2023-12-12T23:05:05.123+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-12T23:05:05.126+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+
+Scenario: Calculate the price of a recipe with a subrecipe on a given date # MVP: suppose subrecipe is of exact quantity needed ?[90m# hifresh/CalculateCostOfARecipe.feature:84?[0m
+  ?[32mGiven ?[0m?[32mrecipes?[0m                                                                                                                 ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | recipe_name    | recipe_description           |
+    | 1         | pancakes       | Gorgeous pancakes            |
+    | 2         | Pizza          | Deep pan pizza               |
+    | 3         | Cheese Sauce   | Cheesy Sauce                 |
+    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
+  ?[32mGiven ?[0m?[32msubrecipes?[0m                                                                                                              ?[90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)?[0m
+    | recipe_id | subrecipe |
+    | 3         | 4         |
+  ?[32mGiven ?[0m?[32mproducts?[0m                                                                                                                ?[90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)?[0m
+    | product_id | product_name       |
+    | 1          | flour              |
+    | 2          | milk               |
+    | 3          | cheese             |
+    | 4          | self-raising flour |
+  ?[32mGiven ?[0m?[32mingredients?[0m                                                                                                             ?[90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)?[0m
+    | ingredient_id | product_id | recipe_id | quantity | unit      |
+    | 1             | 1          | 1         | 100      | GRAM      |
+    | 3             | 3          | 2         | 20       | GRAM      |
+    | 4             | 3          | 3         | 20       | GRAM      |
+    | 5             | 3          | 4         | 40       | GRAM      |
+    | 6             | 2          | 4         | 600      | MILILITRE |
+  ?[32mGiven ?[0m?[32msteps?[0m                                                                                                                   ?[90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)?[0m
+    | step_id | description                              | recipe_id | order |
+    | 1       | step 1                                   | 1         | 1     |
+    | 2       | step 2                                   | 1         | 2     |
+    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
+    | 4       | Heat gently for 5 minutes                | 3         | 2     |
+    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
+  ?[32mGiven ?[0m?[32mdistributioncentres?[0m                                                                                                     ?[90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)?[0m
+    | distributioncentre_id | distributioncentre_name |
+    | 1                     | DC1                     |
+    | 2                     | DC2                     |
+  ?[32mGiven ?[0m?[32mcontracts?[0m                                                                                                               ?[90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)?[0m
+    | contract_id | product_id | supplier_id | distributioncentre_id |
+    | 1           | 1          | 1           | 1                     |
+    | 2           | 1          | 2           | 2                     |
+    | 3           | 2          | 1           | 1                     |
+    | 4           | 2          | 2           | 2                     |
+    | 5           | 3          | 1           | 1                     |
+    | 6           | 3          | 2           | 2                     |
+  ?[33mGiven ?[0m?[33mclauses?[0m
+    | clause_id | contract_id | price   | maxQuantity | unit      | start_date | end_date   |
+    | 1         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 2         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 3         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 4         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
+    | 5         | 3           | 0.0015  | 100000      | MILILITRE | 2024-01-01 | 2024-01-31 |
+    | 6         | 4           | 0.00135 | 80000       | MILILITRE | 2024-01-01 | 2024-01-31 |
+    | 7         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 8         | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 9         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 10        | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 11        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 12        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 13        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 14        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 15        | 5           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 16        | 6           | 0.00135 | 100000      | MILILITRE | 2024-03-01 | 2024-03-31 |
+    | 17        | 5           | 0.0014  | 80000       | GRAM      | 2024-03-01 | 2024-03-31 |
+    | 18        | 6           | 0.00145 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
+  ?[36mGiven ?[0m?[36mthe date is 2024-03-15?[0m
+  ?[36mThen ?[0m?[36mthe average cost of recipe ?[0m?[36m?[1m3?[0m?[36m is ?[0m?[36m?[1m0.9153333?[0m                                                                                ?[90m# hifresh.CalculateCostOfARecipeSteps.theAverageCostOfRecipeIs(int,double)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
