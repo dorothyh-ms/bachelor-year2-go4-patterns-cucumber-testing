@@ -8,5 +8,7 @@ import java.util.Optional;
 
 public interface RecipeRepository extends Repository<Recipe> {
 
+    void addStepToRecipe(int recipeId, String stepDescription);
+    void addStepToRecipe(int recipeId, String stepDescription, int indexToInsert);
 
 }

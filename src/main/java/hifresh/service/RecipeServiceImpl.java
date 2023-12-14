@@ -44,14 +44,12 @@ public class RecipeServiceImpl implements RecipeService {
 
     @Override
     public void addStepToRecipe(int recipeId, String stepDescription) {
-        Recipe recipe = recipeRepository.findById(recipeId);
-        recipeRepository.update(recipe);
+        recipeRepository.addStepToRecipe(recipeId, stepDescription);
     }
 
     @Override
     public void addStepToRecipeAtIndex(int recipeId, String stepDescription, int indexToInsert) {
-        Recipe recipe = recipeRepository.findById(recipeId);
-        recipeRepository.update(recipe);
+        recipeRepository.addStepToRecipe(recipeId, stepDescription, indexToInsert);
     }
 
     @Override
@@ -67,5 +65,6 @@ public class RecipeServiceImpl implements RecipeService {
     public double calculateCost(int recipeId) {
         return 0;
     }
+
 
 }

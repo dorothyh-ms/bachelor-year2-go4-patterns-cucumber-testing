@@ -2,6 +2,7 @@ package hifresh.repository.recipe;
 
 
 import hifresh.domain.recipe.Recipe;
+import hifresh.domain.recipe.Step;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -27,12 +28,26 @@ public class RecipeRepositoryListImpl implements RecipeRepository{
 
     @Override
     public void update(Recipe recipe) {
-        Recipe recipeToUpdate = recipeList.stream().filter(r -> r.getId() == recipe.getId()).findFirst().get();
-        recipeToUpdate.setDescription(recipe.getDescription());
-        recipeToUpdate.setName(recipe.getName());
-        recipeToUpdate.setPicture(recipe.getPicture());
-        recipe.clearSubRecipes();
-        recipe.getSubRecipes().forEach(recipeToUpdate::addSubRecipe);
+//        Recipe recipeToUpdate = recipeList.stream().filter(r -> r.getId() == recipe.getId()).findFirst().get();
+//        recipeToUpdate.setDescription(recipe.getDescription());
+//        recipeToUpdate.setName(recipe.getName());
+//        recipeToUpdate.setPicture(recipe.getPicture());
+//        recipeToUpdate.
+//        recipe.clearSubRecipes();
+//        recipe.getSubRecipes().forEach(recipeToUpdate::addSubRecipe);
 
+
+    }
+
+    @Override
+    public void addStepToRecipe(int recipeId, String stepDescription) {
+        Recipe recipe  = findById(recipeId);
+        recipe.getSteps().add(new Step(stepDescription));
+    }
+
+    @Override
+    public void addStepToRecipe(int recipeId, String stepDescription, int indexToInsert) {
+        Recipe recipe  = findById(recipeId);
+        recipe.getSteps().add(indexToInsert, new Step(stepDescription));
     }
 }

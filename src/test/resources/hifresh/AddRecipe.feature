@@ -130,13 +130,13 @@ Feature: Add a recipe
     When I add recipe 6 with name "Baked spaghetti alla carbonara"
      And I add ingredient 500 grammes "tomatoes" to recipe 6
      And I add ingredient 200 grammes "spaghettti" to recipe 6
-     And I add ingredient 50 grammes "cheese" to recipe 6
+
       And I add subrecipe 3 to recipe 6
-     And I append a preparation step  to recipe 6 with description "Boil the spaghetti"
-     And I append a preparation step  to recipe 6 with description "Heat the oven to 180°C"
-     And I append a preparation step  to recipe 6 with description "Add the spagghetti to an ovendish and top it with the ham and cheese sauce"
-     And I append a preparation step  to recipe 6 with description "Grate the cheese and sprinkle it over the spaghetti"
-     And I append a preparation step  to recipe 6 with description "Put in the oven for 10 minutes"
+     And I append a preparation step to recipe 6 with description "Boil the spaghetti"
+     And I append a preparation step to recipe 6 with description "Heat the oven to 180°C"
+     And I append a preparation step to recipe 6 with description "Add the spagghetti to an ovendish and top it with the ham and cheese sauce"
+     And I append a preparation step to recipe 6 with description "Grate the cheese and sprinkle it over the spaghetti"
+     And I append a preparation step to recipe 6 with description "Put in the oven for 10 minutes"
 
     Then recipe 6 should have 3 ingredients and 5 preparation steps and 1 subrecipe
 

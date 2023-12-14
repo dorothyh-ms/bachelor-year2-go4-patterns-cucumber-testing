@@ -1,5 +1,5 @@
-∫23:05:03.066 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-æ23:05:03.171 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+∫17:20:31.314 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+æ17:20:31.414 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
 
 )  .   ____          _            __ _ _
 * /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -9,9 +9,9 @@
 * =========|_|==============|___/=/_/_/_/
 , :: Spring Boot ::                (v3.1.5)
 
-ˆ2023-12-12T23:05:03.529+01:00  INFO 8000 --- [    Test worker] hifresh.AddRecipeSteps                   : Starting AddRecipeSteps using Java 17 with PID 8000 (started by Dora Sperling in C:\Users\Dora Sperling\IdeaProjects\programming4\HiFresh)
-Ø2023-12-12T23:05:03.530+01:00  INFO 8000 --- [    Test worker] hifresh.AddRecipeSteps                   : No active profile set, falling back to 1 default profile: "default"
-Ø2023-12-12T23:05:04.074+01:00  INFO 8000 --- [    Test worker] hifresh.AddRecipeSteps                   : Started AddRecipeSteps in 0.792 seconds (process running for 2.497)
+¯2023-12-14T17:20:31.809+01:00  INFO 12152 --- [    Test worker] hifresh.AddRecipeSteps                   : Starting AddRecipeSteps using Java 17 with PID 12152 (started by Dora Sperling in C:\Users\Dora Sperling\IdeaProjects\programming4\HiFresh)
+∞2023-12-14T17:20:31.811+01:00  INFO 12152 --- [    Test worker] hifresh.AddRecipeSteps                   : No active profile set, falling back to 1 default profile: "default"
+∞2023-12-14T17:20:32.396+01:00  INFO 12152 --- [    Test worker] hifresh.AddRecipeSteps                   : Started AddRecipeSteps in 0.846 seconds (process running for 2.498)
 
 ·Scenario: Add recipe                                                                                                                                                                    [90m# hifresh/AddRecipe.feature:98[0m
 ñ  [32mGiven [0m[32mrecipes[0m                                                                                                                                                                         [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
@@ -67,31 +67,22 @@
 ’  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m5[0m[32m with description [0m[32m[1m"Chop the tomatoes"[0m                                                                                                      [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
 ’  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m5[0m[32m with description [0m[32m[1m"Add the tomatoes, Cook for a few minutes"[0m                                                                               [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
 ’  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m5[0m[32m with description [0m[32m[1m"Season with salt and black pepper to taste"[0m                                                                             [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
-Î  [31mThen [0m[31mrecipe [0m[31m[1m5[0m[31m should have [0m[31m[1m2[0m[31m ingredients and [0m[31m[1m5[0m[31m preparation steps[0m                                                                                                                       [90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(int,int,int)[0m
-u      [31morg.opentest4j.AssertionFailedError: recipe should have 5 steps but has 0 ==> expected: <5> but was: <0>
-[	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-c	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-L	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-L	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-H	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:560)
-d	at hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(AddRecipeSteps.java:181)
-p	at √¢≈ì¬Ω.recipe 5 should have 2 ingredients and 5 preparation steps(classpath:hifresh/AddRecipe.feature:107)
-[0m
-∏  [36mAnd [0m[36mpreparation step [0m[36m[1m3[0m[36m is [0m[36m[1m"Chop the tomatoes."[0m                                                                                                                                        [90m# hifresh.AddRecipeSteps.preparationStepIs(int,java.lang.String)[0m
-µ2023-12-12T23:05:04.915+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Ω2023-12-12T23:05:04.916+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+Î  [32mThen [0m[32mrecipe [0m[32m[1m5[0m[32m should have [0m[32m[1m2[0m[32m ingredients and [0m[32m[1m5[0m[32m preparation steps[0m                                                                                                                       [90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(int,int,int)[0m
+∏  [32mAnd [0m[32mpreparation step [0m[32m[1m3[0m[32m is [0m[32m[1m"Chop the tomatoes."[0m                                                                                                                                        [90m# hifresh.AddRecipeSteps.preparationStepIs(int,java.lang.String)[0m
+∂2023-12-14T17:20:33.222+01:00  INFO 12152 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+æ2023-12-14T17:20:33.224+01:00  INFO 12152 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
 
-∑Scenario: Add recipe with subrecipe                                                                                                          [90m# hifresh/AddRecipe.feature:129[0m
-Î  [32mGiven [0m[32mrecipes[0m                                                                                                                              [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
+∂Scenario: Add recipe with subrecipe                                                                                                         [90m# hifresh/AddRecipe.feature:129[0m
+Í  [32mGiven [0m[32mrecipes[0m                                                                                                                             [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
 B    | recipe_id | recipe_name    | recipe_description           |
 B    | 1         | pancakes       | Gorgeous pancakes            |
 B    | 2         | Pizza          | Deep pan pizza               |
 B    | 3         | Cheese Sauce   | Cheesy Sauce                 |
 B    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
-Ó  [32mGiven [0m[32msubrecipes[0m                                                                                                                           [90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)[0m
+Ì  [32mGiven [0m[32msubrecipes[0m                                                                                                                          [90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)[0m
     | recipe_id | subrecipe |
     | 3         | 4         |
-Ï  [32mGiven [0m[32mproducts[0m                                                                                                                             [90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)[0m
+Î  [32mGiven [0m[32mproducts[0m                                                                                                                            [90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)[0m
 (    | product_id | product_name       |
 (    | 1          | flour              |
 (    | 2          | milk               |
@@ -101,25 +92,25 @@
 (    | 6          | beef mince         |
 (    | 7          | spaghetti          |
 (    | 8          | ham                |
-Ô  [32mGiven [0m[32mingredients[0m                                                                                                                          [90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)[0m
+Ó  [32mGiven [0m[32mingredients[0m                                                                                                                         [90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)[0m
 F    | ingredient_id | product_id | recipe_id | quantity | unit      |
 F    | 1             | 1          | 1         | 100      | GRAM      |
 F    | 3             | 3          | 2         | 20       | GRAM      |
 F    | 4             | 3          | 3         | 20       | GRAM      |
 F    | 5             | 3          | 4         | 40       | GRAM      |
 F    | 6             | 2          | 4         | 600      | MILILITRE |
-È  [32mGiven [0m[32msteps[0m                                                                                                                                [90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)[0m
+Ë  [32mGiven [0m[32msteps[0m                                                                                                                               [90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)[0m
 O    | step_id | description                              | recipe_id | order |
 O    | 1       | step 1                                   | 1         | 1     |
 O    | 2       | step 2                                   | 1         | 2     |
 O    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
 O    | 4       | Heat gently for 5 minutes                | 3         | 2     |
 O    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
-˜  [32mGiven [0m[32mdistributioncentres[0m                                                                                                                  [90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)[0m
+ˆ  [32mGiven [0m[32mdistributioncentres[0m                                                                                                                 [90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)[0m
 8    | distributioncentre_id | distributioncentre_name |
 8    | 1                     | DC1                     |
 8    | 2                     | DC2                     |
-Ì  [32mGiven [0m[32mcontracts[0m                                                                                                                            [90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)[0m
+Ï  [32mGiven [0m[32mcontracts[0m                                                                                                                           [90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)[0m
 G    | contract_id | product_id | supplier_id | distributioncentre_id |
 G    | 1           | 1          | 1           | 1                     |
 G    | 2           | 1          | 2           | 2                     |
@@ -127,19 +118,18 @@
 G    | 4           | 2          | 2           | 2                     |
 G    | 5           | 3          | 1           | 1                     |
 G    | 6           | 3          | 2           | 2                     |
-é  [32mWhen [0m[32mI add recipe [0m[32m[1m6[0m[32m with name [0m[32m[1m"Baked spaghetti alla carbonara"[0m                                                                             [90m# hifresh.AddRecipeSteps.iAddRecipeWithName(int,java.lang.String)[0m
-≥  [32mAnd [0m[32mI add ingredient [0m[32m[1m500[0m[32m grammes [0m[32m[1m"tomatoes"[0m[32m to recipe [0m[32m[1m6[0m                                                                                    [90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)[0m
-≥  [32mAnd [0m[32mI add ingredient [0m[32m[1m200[0m[32m grammes [0m[32m[1m"spaghettti"[0m[32m to recipe [0m[32m[1m6[0m                                                                                  [90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)[0m
-≥  [32mAnd [0m[32mI add ingredient [0m[32m[1m50[0m[32m grammes [0m[32m[1m"cheese"[0m[32m to recipe [0m[32m[1m6[0m                                                                                       [90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)[0m
-Ñ  [32mAnd [0m[32mI add subrecipe [0m[32m[1m3[0m[32m to recipe [0m[32m[1m6[0m                                                                                                          [90m# hifresh.AddRecipeSteps.iAddSubrecipeToRecipe(int,int)[0m
-h  [33mAnd [0m[33mI append a preparation step  to recipe 6 with description "Boil the spaghetti"[0m
-o  [36mAnd [0m[36mI append a preparation step  to recipe 6 with description "Heat the oven to 180√Ç¬∞C"[0m
-†  [36mAnd [0m[36mI append a preparation step  to recipe 6 with description "Add the spagghetti to an ovendish and top it with the ham and cheese sauce"[0m
-â  [36mAnd [0m[36mI append a preparation step  to recipe 6 with description "Grate the cheese and sprinkle it over the spaghetti"[0m
-t  [36mAnd [0m[36mI append a preparation step  to recipe 6 with description "Put in the oven for 10 minutes"[0m
-Ê  [36mThen [0m[36mrecipe [0m[36m[1m6[0m[36m should have [0m[36m[1m3[0m[36m ingredients and [0m[36m[1m5[0m[36m preparation steps and [0m[36m[1m1[0m[36m subrecipe[0m                                                            [90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationStepsAndSubrecipe(int,int,int,int)[0m
-µ2023-12-12T23:05:05.022+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Ω2023-12-12T23:05:05.024+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+ç  [32mWhen [0m[32mI add recipe [0m[32m[1m6[0m[32m with name [0m[32m[1m"Baked spaghetti alla carbonara"[0m                                                                            [90m# hifresh.AddRecipeSteps.iAddRecipeWithName(int,java.lang.String)[0m
+≤  [32mAnd [0m[32mI add ingredient [0m[32m[1m500[0m[32m grammes [0m[32m[1m"tomatoes"[0m[32m to recipe [0m[32m[1m6[0m                                                                                   [90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)[0m
+≤  [32mAnd [0m[32mI add ingredient [0m[32m[1m200[0m[32m grammes [0m[32m[1m"spaghettti"[0m[32m to recipe [0m[32m[1m6[0m                                                                                 [90m# hifresh.AddRecipeSteps.iAddIngredientGrammesToRecipe(int,java.lang.String,int)[0m
+É  [32mAnd [0m[32mI add subrecipe [0m[32m[1m3[0m[32m to recipe [0m[32m[1m6[0m                                                                                                         [90m# hifresh.AddRecipeSteps.iAddSubrecipeToRecipe(int,int)[0m
+©  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m6[0m[32m with description [0m[32m[1m"Boil the spaghetti"[0m                                                         [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
+¨  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m6[0m[32m with description [0m[32m[1m"Heat the oven to 180√Ç¬∞C"[0m                                                     [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
+©  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m6[0m[32m with description [0m[32m[1m"Add the spagghetti to an ovendish and top it with the ham and cheese sauce"[0m [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
+©  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m6[0m[32m with description [0m[32m[1m"Grate the cheese and sprinkle it over the spaghetti"[0m                        [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
+©  [32mAnd [0m[32mI append a preparation step to recipe [0m[32m[1m6[0m[32m with description [0m[32m[1m"Put in the oven for 10 minutes"[0m                                             [90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)[0m
+Â  [32mThen [0m[32mrecipe [0m[32m[1m6[0m[32m should have [0m[32m[1m3[0m[32m ingredients and [0m[32m[1m5[0m[32m preparation steps and [0m[32m[1m1[0m[32m subrecipe[0m                                                           [90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationStepsAndSubrecipe(int,int,int,int)[0m
+∂2023-12-14T17:20:33.252+01:00  INFO 12152 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+æ2023-12-14T17:20:33.254+01:00  INFO 12152 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
 
 fScenario: Add a step to a recipe                            [90m# hifresh/AddRecipe.feature:146[0m
 ö  [32mGiven [0m[32mrecipes[0m                                             [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
@@ -190,8 +180,8 @@
 º  [32mWhen [0m[32mi add a step [0m[32m[1m"Serve hot"[0m[32m to recipe [0m[32m[1m1[0m                 [90m# hifresh.AddRecipeSteps.iAddAStepToRecipe(java.lang.String,int)[0m
 û  [32mThen [0m[32mthe recipe has [0m[32m[1m3[0m[32m steps[0m                               [90m# hifresh.AddRecipeSteps.theRecipeHasSteps(int)[0m
 Ã  [32mAnd [0m[32mthe last step of recipe [0m[32m[1m1[0m[32m has description [0m[32m[1m"Serve hot"[0m [90m# hifresh.AddRecipeSteps.theLastStepOfRecipeHasDescription(int,java.lang.String)[0m
-µ2023-12-12T23:05:05.057+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Ω2023-12-12T23:05:05.061+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
+∂2023-12-14T17:20:33.283+01:00  INFO 12152 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+æ2023-12-14T17:20:33.288+01:00  INFO 12152 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
 
 nScenario: Insert a step into a recipe                               [90m# hifresh/AddRecipe.feature:151[0m
 ¢  [32mGiven [0m[32mrecipes[0m                                                     [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
@@ -244,137 +234,3 @@
 ‹  [32mAnd [0m[32mstep [0m[32m[1m1[0m[32m for recipe [0m[32m[1m3[0m[32m is [0m[32m[1m"Grate the cheese"[0m                     [90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)[0m
 ‹  [32mAnd [0m[32mstep [0m[32m[1m2[0m[32m for recipe [0m[32m[1m3[0m[32m is [0m[32m[1m"Add the cheese to the bechamel sauce"[0m [90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)[0m
 ‹  [32mAnd [0m[32mstep [0m[32m[1m3[0m[32m for recipe [0m[32m[1m3[0m[32m is [0m[32m[1m"Heat gently for 5 minutes"[0m            [90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)[0m
-µ2023-12-12T23:05:05.085+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Ω2023-12-12T23:05:05.090+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
-
-êScenario: Calculate price of a recipe on a given date  #DONE see calculaterecipecost.xslx [90m# hifresh/CalculateCostOfARecipe.feature:80[0m
-∏  [32mGiven [0m[32mrecipes[0m                                                                           [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
-B    | recipe_id | recipe_name    | recipe_description           |
-B    | 1         | pancakes       | Gorgeous pancakes            |
-B    | 2         | Pizza          | Deep pan pizza               |
-B    | 3         | Cheese Sauce   | Cheesy Sauce                 |
-B    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
-ª  [32mGiven [0m[32msubrecipes[0m                                                                        [90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)[0m
-    | recipe_id | subrecipe |
-    | 3         | 4         |
-π  [32mGiven [0m[32mproducts[0m                                                                          [90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)[0m
-(    | product_id | product_name       |
-(    | 1          | flour              |
-(    | 2          | milk               |
-(    | 3          | cheese             |
-(    | 4          | self-raising flour |
-º  [32mGiven [0m[32mingredients[0m                                                                       [90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)[0m
-F    | ingredient_id | product_id | recipe_id | quantity | unit      |
-F    | 1             | 1          | 1         | 100      | GRAM      |
-F    | 3             | 3          | 2         | 20       | GRAM      |
-F    | 4             | 3          | 3         | 20       | GRAM      |
-F    | 5             | 3          | 4         | 40       | GRAM      |
-F    | 6             | 2          | 4         | 600      | MILILITRE |
-∂  [32mGiven [0m[32msteps[0m                                                                             [90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)[0m
-O    | step_id | description                              | recipe_id | order |
-O    | 1       | step 1                                   | 1         | 1     |
-O    | 2       | step 2                                   | 1         | 2     |
-O    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
-O    | 4       | Heat gently for 5 minutes                | 3         | 2     |
-O    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
-ƒ  [32mGiven [0m[32mdistributioncentres[0m                                                               [90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)[0m
-8    | distributioncentre_id | distributioncentre_name |
-8    | 1                     | DC1                     |
-8    | 2                     | DC2                     |
-∫  [32mGiven [0m[32mcontracts[0m                                                                         [90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)[0m
-G    | contract_id | product_id | supplier_id | distributioncentre_id |
-G    | 1           | 1          | 1           | 1                     |
-G    | 2           | 1          | 2           | 2                     |
-G    | 3           | 2          | 1           | 1                     |
-G    | 4           | 2          | 2           | 2                     |
-G    | 5           | 3          | 1           | 1                     |
-G    | 6           | 3          | 2           | 2                     |
-#  [33mGiven [0m[33mclauses[0m
-^    | clause_id | contract_id | price   | maxQuantity | unit      | start_date | end_date   |
-^    | 1         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 2         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 3         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 4         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 5         | 3           | 0.0015  | 100000      | MILILITRE | 2024-01-01 | 2024-01-31 |
-^    | 6         | 4           | 0.00135 | 80000       | MILILITRE | 2024-01-01 | 2024-01-31 |
-^    | 7         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 8         | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 9         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 10        | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 11        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 12        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 13        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 14        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 15        | 5           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 16        | 6           | 0.00135 | 100000      | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 17        | 5           | 0.0014  | 80000       | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 18        | 6           | 0.00145 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-2  [36mGiven [0m[36mthe date is 2024-03-15[0m
-‰  [36mThen [0m[36mthe average cost of recipe [0m[36m[1m4[0m[36m is [0m[36m[1m0.9153333[0m                                          [90m# hifresh.CalculateCostOfARecipeSteps.theAverageCostOfRecipeIs(int,double)[0m
-µ2023-12-12T23:05:05.123+01:00  INFO 8000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.AddRecipeSteps]: AddRecipeSteps does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Ω2023-12-12T23:05:05.126+01:00  INFO 8000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.AddRecipeSteps
-
-∂Scenario: Calculate the price of a recipe with a subrecipe on a given date # MVP: suppose subrecipe is of exact quantity needed [90m# hifresh/CalculateCostOfARecipe.feature:84[0m
-ﬁ  [32mGiven [0m[32mrecipes[0m                                                                                                                 [90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)[0m
-B    | recipe_id | recipe_name    | recipe_description           |
-B    | 1         | pancakes       | Gorgeous pancakes            |
-B    | 2         | Pizza          | Deep pan pizza               |
-B    | 3         | Cheese Sauce   | Cheesy Sauce                 |
-B    | 4         | Bechamel Sauce | Creamy Dreamy Bechamel Sauce |
-·  [32mGiven [0m[32msubrecipes[0m                                                                                                              [90m# hifresh.AddRecipeSteps.subrecipes(io.cucumber.datatable.DataTable)[0m
-    | recipe_id | subrecipe |
-    | 3         | 4         |
-ﬂ  [32mGiven [0m[32mproducts[0m                                                                                                                [90m# hifresh.AddRecipeSteps.products(io.cucumber.datatable.DataTable)[0m
-(    | product_id | product_name       |
-(    | 1          | flour              |
-(    | 2          | milk               |
-(    | 3          | cheese             |
-(    | 4          | self-raising flour |
-‚  [32mGiven [0m[32mingredients[0m                                                                                                             [90m# hifresh.AddRecipeSteps.ingredients(io.cucumber.datatable.DataTable)[0m
-F    | ingredient_id | product_id | recipe_id | quantity | unit      |
-F    | 1             | 1          | 1         | 100      | GRAM      |
-F    | 3             | 3          | 2         | 20       | GRAM      |
-F    | 4             | 3          | 3         | 20       | GRAM      |
-F    | 5             | 3          | 4         | 40       | GRAM      |
-F    | 6             | 2          | 4         | 600      | MILILITRE |
-‹  [32mGiven [0m[32msteps[0m                                                                                                                   [90m# hifresh.AddRecipeSteps.steps(io.cucumber.datatable.DataTable)[0m
-O    | step_id | description                              | recipe_id | order |
-O    | 1       | step 1                                   | 1         | 1     |
-O    | 2       | step 2                                   | 1         | 2     |
-O    | 3       | Add the cheese to the bechamel sauce     | 3         | 1     |
-O    | 4       | Heat gently for 5 minutes                | 3         | 2     |
-O    | 5       | Lookup online how to make bechamel sauce | 4         | 1     |
-Í  [32mGiven [0m[32mdistributioncentres[0m                                                                                                     [90m# hifresh.AddRecipeSteps.distributionCenters(io.cucumber.datatable.DataTable)[0m
-8    | distributioncentre_id | distributioncentre_name |
-8    | 1                     | DC1                     |
-8    | 2                     | DC2                     |
-‡  [32mGiven [0m[32mcontracts[0m                                                                                                               [90m# hifresh.AddRecipeSteps.contracts(io.cucumber.datatable.DataTable)[0m
-G    | contract_id | product_id | supplier_id | distributioncentre_id |
-G    | 1           | 1          | 1           | 1                     |
-G    | 2           | 1          | 2           | 2                     |
-G    | 3           | 2          | 1           | 1                     |
-G    | 4           | 2          | 2           | 2                     |
-G    | 5           | 3          | 1           | 1                     |
-G    | 6           | 3          | 2           | 2                     |
-#  [33mGiven [0m[33mclauses[0m
-^    | clause_id | contract_id | price   | maxQuantity | unit      | start_date | end_date   |
-^    | 1         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 2         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 3         | 1           | 0.0015  | 100000      | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 4         | 2           | 0.00135 | 80000       | GRAM      | 2024-01-01 | 2024-01-31 |
-^    | 5         | 3           | 0.0015  | 100000      | MILILITRE | 2024-01-01 | 2024-01-31 |
-^    | 6         | 4           | 0.00135 | 80000       | MILILITRE | 2024-01-01 | 2024-01-31 |
-^    | 7         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 8         | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 9         | 1           | 0.0015  | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 10        | 2           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 11        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 12        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 13        | 3           | 0.0015  | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 14        | 4           | 0.00135 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 15        | 5           | 0.00135 | 100000      | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 16        | 6           | 0.00135 | 100000      | MILILITRE | 2024-03-01 | 2024-03-31 |
-^    | 17        | 5           | 0.0014  | 80000       | GRAM      | 2024-03-01 | 2024-03-31 |
-^    | 18        | 6           | 0.00145 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
-2  [36mGiven [0m[36mthe date is 2024-03-15[0m
-ä  [36mThen [0m[36mthe average cost of recipe [0m[36m[1m3[0m[36m is [0m[36m[1m0.9153333[0m                                                                                [90m# hifresh.CalculateCostOfARecipeSteps.theAverageCostOfRecipeIs(int,double)[0m

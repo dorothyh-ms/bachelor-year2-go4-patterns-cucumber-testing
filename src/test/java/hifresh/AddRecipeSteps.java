@@ -55,6 +55,7 @@ public class AddRecipeSteps {
     IngredientRepository ingredientRepository;
 
 
+    private int currentRecipeId;
 
     @Given("products")
     public void products(DataTable dataTable) {
@@ -159,6 +160,7 @@ public class AddRecipeSteps {
 
     @When("I add recipe {int} with name {string}")
     public void iAddRecipeWithName(int recipeId, String recipeName) {
+        currentRecipeId = recipeId;
         recipeController.makeNewRecipe(recipeId, recipeName);
     }
 
@@ -183,22 +185,39 @@ public class AddRecipeSteps {
 
     @And("preparation step {int} is {string}")
     public void preparationStepIs(int stepNumber, String stepDescription) {
+        Recipe recipe = recipeRepository.findById(currentRecipeId);
+        Step step = recipe.getSteps().get(stepNumber);
+        assertEquals(stepDescription, step.getDescription());
+
     }
 
     @And("I add subrecipe {int} to recipe {int}")
     public void iAddSubrecipeToRecipe(int subRecipeId, int recipeId) {
+        recipeController.addSubRecipeToRecipe(subRecipeId, recipeId);
     }
 
     @Then("recipe {int} should have {int} ingredients and {int} preparation steps and {int} subrecipe")
     public void recipeShouldHaveIngredientsAndPreparationStepsAndSubrecipe(int recipeId, int numberOfIngredients, int numberOfSteps, int numberOfSubRecipes) {
+
+        Recipe recipe = recipeRepository.findById(recipeId);
+        int actualNumberOfSteps = recipe.getSteps().size();
+        int actualNumberOfSubRecipes = recipe.getSubRecipes().size();
+        List<Ingredient> ingredients = ingredientRepository.findByRecipeId(recipeId);
+        int actualNumberOfIngredients = ingredients.size();
+        assertEquals(numberOfIngredients, actualNumberOfIngredients, String.format("recipe should have %d ingredients but has %d", numberOfIngredients, actualNumberOfIngredients));
+        assertEquals(numberOfSteps, actualNumberOfSteps, String.format("recipe should have %d steps but has %d", numberOfSteps, recipe.getSteps().size()));
+        assertEquals(numberOfSubRecipes, actualNumberOfSubRecipes, String.format("recipe should have %d subrecipes but has %d", numberOfSubRecipes, recipe.getSubRecipes().size()));
     }
 
     @When("i add a step {string} to recipe {int}")
     public void iAddAStepToRecipe(String stepDescription, int recipeId) {
+        recipeController.addStepToRecipe(stepDescription, recipeId);
     }
 
     @Then("the recipe has {int} steps")
     public void theRecipeHasSteps(int numberOfSteps) {
+        
+
     }
 
     @And("the last step of recipe {int} has description {string}")

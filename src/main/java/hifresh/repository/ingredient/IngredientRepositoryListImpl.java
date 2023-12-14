@@ -28,6 +28,7 @@ public class IngredientRepositoryListImpl implements IngredientRepository {
 
     @Override
     public Ingredient save(Ingredient ingredient) {
-        return null;
+        ingredients.add(ingredient);
+        return ingredient;
     }
 }
