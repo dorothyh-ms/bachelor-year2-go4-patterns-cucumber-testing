@@ -20,4 +20,9 @@ public class DistributionCenterRepositoryListImpl implements DistributionCenterR
     public DistributionCenter save(DistributionCenter distributionCenter) {
         return null;
     }
+
+    @Override
+    public void clear() {
+
+    }
 }

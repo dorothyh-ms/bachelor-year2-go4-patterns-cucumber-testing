@@ -1,12 +1,12 @@
 package hifresh.controllers;
 
-import hifresh.domain.recipe.Recipe;
+import hifresh.domain.recipe.CompositeRecipe;
+import hifresh.domain.recipe.RecipeComponent;
 import hifresh.service.RecipeService;
-import hifresh.service.RecipeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import java.util.List;
+import java.time.LocalDate;
 
 
 @Controller
@@ -21,7 +21,7 @@ public class RecipeController {
     }
 
     public int makeNewRecipe(int id, String recipeName){
-        Recipe recipe = recipeService.addRecipe(id, recipeName);
+        RecipeComponent recipe = recipeService.addRecipe(id, recipeName);
         return recipe.getId();
     }
 
@@ -29,7 +29,7 @@ public class RecipeController {
         recipeService.addStepToRecipe(recipeId, stepDescription);
     };
 
-    public void insertStepIntoRecipe(String stepDescription, int indexToInsert, int recipeId){
+    public void insertStepIntoRecipe(String stepDescription,  int recipeId, int indexToInsert){
         recipeService.addStepToRecipeAtIndex(recipeId, stepDescription, indexToInsert);
     };
 
@@ -39,9 +39,16 @@ public class RecipeController {
     }
 
 
-    public double calculateCost(int recipeId){
-        return recipeService.calculateCost(recipeId);
+    public double calculateCost(int recipeId, LocalDate purchaseDate){
+        return recipeService.calculateCost(recipeId, purchaseDate);
     }
 
 
+    public void addSubRecipeToRecipe(int subRecipeId, int recipeId) {
+        recipeService.addSubRecipeToRecipe(subRecipeId, recipeId);
+    }
+
+    public void setPricingStrategy(int recipeId, String pricingStrategy){
+        recipeService.setPricingStrategy(recipeId, pricingStrategy);
+    };
 }

@@ -1,9 +1,11 @@
 package hifresh.service;
 
 
+import hifresh.domain.pricing.RecipePricingStrategyFactory;
 import hifresh.domain.recipe.Ingredient;
-import hifresh.domain.recipe.Recipe;
+import hifresh.domain.recipe.CompositeRecipe;
 import hifresh.domain.purchase.Product;
+import hifresh.domain.recipe.RecipeComponent;
 import hifresh.domain.util.Quantity;
 import hifresh.domain.util.Unit;
 import hifresh.repository.contract.ContractRepository;
@@ -12,6 +14,8 @@ import hifresh.repository.product.ProductRepository;
 import hifresh.repository.recipe.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 
 @Service
 public class RecipeServiceImpl implements RecipeService {
@@ -25,6 +29,12 @@ public class RecipeServiceImpl implements RecipeService {
     private final IngredientRepository ingredientRepository;
 
 
+    @Override
+    public void setPricingStrategy(int recipeId, String type) {
+        RecipeComponent recipe = recipeRepository.findById(recipeId);
+        recipe.setPricingStrategy(RecipePricingStrategyFactory.getPricingStrategy(type));
+    }
+
     @Autowired
     public RecipeServiceImpl(RecipeRepository recipeRepository, ContractRepository contractRepository, ProductRepository productRepository, IngredientRepository ingredientRepository) {
         this.recipeRepository = recipeRepository;
@@ -36,8 +46,9 @@ public class RecipeServiceImpl implements RecipeService {
 
 
     @Override
-    public Recipe addRecipe(int id, String recipeName) {
-        Recipe recipe = new Recipe(recipeName);
+    public RecipeComponent addRecipe(int id, String recipeName) {
+        RecipeComponent recipe = new CompositeRecipe();
+        recipe.setName(recipeName);
         recipe.setId(id);
         return recipeRepository.save(recipe);
     }
@@ -48,22 +59,30 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    public void addSubRecipeToRecipe(int subRecipeId, int recipeId) {
+        CompositeRecipe mainRecipe = recipeRepository.findCompositeRecipeById(recipeId);
+        RecipeComponent subRecipe = recipeRepository.findById(subRecipeId);
+        mainRecipe.addSubRecipe(subRecipe);
+    }
+
+    @Override
     public void addStepToRecipeAtIndex(int recipeId, String stepDescription, int indexToInsert) {
         recipeRepository.addStepToRecipe(recipeId, stepDescription, indexToInsert);
     }
 
     @Override
     public void addIngredientToRecipe(int recipeId, String productName, int ingredientQuantity) {
-        Recipe recipe = recipeRepository.findById(recipeId);
         Product product = productRepository.findByName(productName);
-        Ingredient ingredient = new Ingredient(new Quantity(Unit.GRAM, ingredientQuantity), product, recipe);
+        Ingredient ingredient = new Ingredient(new Quantity(Unit.GRAM, ingredientQuantity), product);
         ingredientRepository.save(ingredient);
+        recipeRepository.addIngredientToRecipe(recipeId, ingredient);
     }
 
 
     @Override
-    public double calculateCost(int recipeId) {
-        return 0;
+    public double calculateCost(int recipeId, LocalDate purchaseDate) {
+        RecipeComponent recipe = recipeRepository.findById(recipeId);
+        return recipe.calculateCost(purchaseDate);
     }
 
 

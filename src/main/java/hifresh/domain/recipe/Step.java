@@ -26,4 +26,11 @@ public class Step {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "Step{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

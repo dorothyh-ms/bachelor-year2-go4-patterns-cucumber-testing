@@ -18,15 +18,15 @@ Feature: Add a recipe
 
 
     Given products
-      | product_id | product_name       |
-      | 1          | flour              |
-      | 2          | milk               |
-      | 3          | cheese             |
-      | 4          | self-raising flour |
-      | 5          | tomatoes           |
-      | 6          | beef mince         |
-      | 7          | spaghetti          |
-      | 8          | ham                |
+      | product_id | product_name       | unit      |
+      | 1          | flour              | GRAM      |
+      | 2          | milk               | MILILITRE |
+      | 3          | cheese             | GRAM      |
+      | 4          | self-raising flour | GRAM      |
+      | 5          | tomatoes           | GRAM      |
+      | 6          | beef mince         | GRAM      |
+      | 7          | spaghetti          | GRAM      |
+      | 8          | ham                | GRAM      |
 
     Given ingredients
       | ingredient_id | product_id | recipe_id | quantity | unit      |
@@ -59,27 +59,26 @@ Feature: Add a recipe
       | 6           | 3          | 2              | 2                     |
 
 
-#    Given clauses
-#      | clause_id   | contract_id | price        | maxQuantity    | unit       | start_date  | end_date   |
-#      | 1           | 1           | 0.0015       | 100000         | GRAM       | 2024-01-01  | 2024-01-31 |
-#      | 2           | 2           | 0.00135      | 80000          | GRAM       | 2024-01-01  | 2024-01-31 |
-#      | 3           | 1           | 0.0015       | 100000         | GRAM       | 2024-01-01  | 2024-01-31 |
-#      | 4           | 2           | 0.00135      | 80000          | GRAM       | 2024-01-01  | 2024-01-31 |
-#      | 5           | 3           | 0.0015       | 100000         | MILILITRE  | 2024-01-01  | 2024-01-31 |
-#      | 6           | 4           | 0.00135      | 80000          | MILILITRE  | 2024-01-01  | 2024-01-31 |
-#      | 7           | 1           | 0.0015       | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
-#      | 8           | 2           | 0.00135      | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
-#      | 9           | 1           | 0.0015       | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
-#      | 10          | 2           | 0.00135      | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
-#      | 11          | 3           | 0.0015       | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
-#      | 12          | 4           | 0.00135      | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
-#      | 13          | 3           | 0.0015       | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
-#      | 14          | 4           | 0.00135      | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
-#      | 15          | 5           | 0.00135      | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
-#      | 16          | 6           | 0.00135      | 100000         | MILILITRE  | 2024-03-01  | 2024-03-31 |
-#      | 17          | 5           | 0.0014       | 80000          | GRAM       | 2024-03-01  | 2024-03-31 |
-#      | 18          | 6           | 0.00145      | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
-
+    Given clauses
+      | clause_id   | contract_id | price        | maxQuantity    | unit       | start_date  | end_date   |
+      | 1           | 1           | 0.0015       | 100000         | GRAM       | 2024-01-01  | 2024-01-31 |
+      | 2           | 2           | 0.00135      | 80000          | GRAM       | 2024-01-01  | 2024-01-31 |
+      | 3           | 1           | 0.0015       | 100000         | GRAM       | 2024-01-01  | 2024-01-31 |
+      | 4           | 2           | 0.00135      | 80000          | GRAM       | 2024-01-01  | 2024-01-31 |
+      | 5           | 3           | 0.0015       | 100000         | MILILITRE  | 2024-01-01  | 2024-01-31 |
+      | 6           | 4           | 0.00135      | 80000          | MILILITRE  | 2024-01-01  | 2024-01-31 |
+      | 7           | 1           | 0.0015       | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
+      | 8           | 2           | 0.00135      | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
+      | 9           | 1           | 0.0015       | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
+      | 10          | 2           | 0.00135      | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
+      | 11          | 3           | 0.0015       | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
+      | 12          | 4           | 0.00135      | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
+      | 13          | 3           | 0.0015       | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
+      | 14          | 4           | 0.00135      | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
+      | 15          | 5           | 0.00135      | 100000         | GRAM       | 2024-03-01  | 2024-03-31 |
+      | 16          | 6           | 0.00135      | 100000         | MILILITRE  | 2024-03-01  | 2024-03-31 |
+      | 17          | 5           | 0.0014       | 80000          | GRAM       | 2024-03-01  | 2024-03-31 |
+      | 18          | 6           | 0.00145      | 80000          | MILILITRE  | 2024-03-01  | 2024-03-31 |
 
 #  Scenario: Add recipe
 #    When I add recipe 5 with name "bolognese sauce"
@@ -105,7 +104,7 @@ Feature: Add a recipe
 		And I append a preparation step to recipe 5 with description "Add the tomatoes, Cook for a few minutes"
 		And I append a preparation step to recipe 5 with description "Season with salt and black pepper to taste"
 		Then recipe 5 should have 2 ingredients and 5 preparation steps
-		And preparation step 3 is "Chop the tomatoes."
+		And preparation step 3 is "Chop the tomatoes"
 
 
 
@@ -128,8 +127,9 @@ Feature: Add a recipe
   #  ALT - Add recipe with subrecipe
     Scenario: Add recipe with subrecipe
     When I add recipe 6 with name "Baked spaghetti alla carbonara"
-     And I add ingredient 500 grammes "tomatoes" to recipe 6
-     And I add ingredient 200 grammes "spaghettti" to recipe 6
+     And I add ingredient 200 grammes "ham" to recipe 6
+     And I add ingredient 500 grammes "spaghettti" to recipe 6
+      And I add ingredient 50 grammes "cheese" to recipe 6
 
       And I add subrecipe 3 to recipe 6
      And I append a preparation step to recipe 6 with description "Boil the spaghetti"

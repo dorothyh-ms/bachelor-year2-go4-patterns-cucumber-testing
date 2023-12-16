@@ -28,7 +28,18 @@ public class IngredientRepositoryListImpl implements IngredientRepository {
 
     @Override
     public Ingredient save(Ingredient ingredient) {
+        if (ingredient.getId() == 0){ // if id not set
+            ingredient.setId(ingredients.stream()
+                    .mapToInt(Ingredient::getId)
+                    .max()
+                    .orElse(1));
+        }
         ingredients.add(ingredient);
         return ingredient;
+    }
+
+    @Override
+    public void clear() {
+        ingredients.clear();
     }
 }

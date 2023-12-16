@@ -1,11 +1,12 @@
 package hifresh.service;
 
-import hifresh.domain.recipe.Recipe;
+import hifresh.domain.recipe.CompositeRecipe;
+import hifresh.domain.recipe.RecipeComponent;
 
-import java.util.List;
+import java.time.LocalDate;
 
 public interface RecipeService {
-    Recipe addRecipe(int id, String recipeName);
+    RecipeComponent addRecipe(int id, String recipeName);
 
     public void addStepToRecipe(int recipeId, String stepDescription);
 
@@ -15,5 +16,9 @@ public interface RecipeService {
 
 
 
-    double calculateCost(int recipeId);
+    double calculateCost(int recipeId, LocalDate purchaseDate);
+
+    void addSubRecipeToRecipe(int subRecipeId, int recipeId);
+
+    void setPricingStrategy(int recipeId, String type);
 }

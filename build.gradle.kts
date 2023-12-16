@@ -23,7 +23,9 @@ repositories {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-    // Work around. Gradle does not include enough information to disambiguate
-    // between different examples and scenarios.
     systemProperty("cucumber.junit-platform.naming-strategy", "long")
+   testLogging {
+    showStandardStreams = true
+    }
 }
+

@@ -8,4 +8,7 @@ public interface Repository <T>{
     public void update(T t);
 
     public T save(T t);
+
+    public void clear();
+
 }

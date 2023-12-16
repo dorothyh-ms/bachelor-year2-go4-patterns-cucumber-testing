@@ -2,7 +2,8 @@ package hifresh.domain.recipe;
 
 import hifresh.domain.purchase.Product;
 import hifresh.domain.util.Quantity;
-import hifresh.domain.util.Unit;
+
+import java.util.Objects;
 
 public class Ingredient {
 
@@ -10,12 +11,11 @@ public class Ingredient {
     private Quantity quantity;
     private Product product;
 
-    private Recipe recipe;
+    private RecipeComponent recipe;
 
-    public Ingredient(Quantity quantity, Product product, Recipe recipe) {
+    public Ingredient(Quantity quantity, Product product) {
         this.quantity = quantity;
         this.product = product;
-        this.recipe = recipe;
     }
 
     public int getId() {
@@ -42,11 +42,26 @@ public class Ingredient {
         this.product = product;
     }
 
-    public Recipe getRecipe() {
+    public RecipeComponent getRecipe() {
         return recipe;
     }
 
-    public void setRecipe(Recipe recipe) {
-        this.recipe = recipe;
+    public void setRecipe(RecipeComponent recipeComponent) {
+        if (this.recipe != recipeComponent){
+            this.recipe = recipeComponent;
+        }
+    }
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "id=" + id +
+                ", quantity=" + quantity +
+                ", product=" + product +
+                '}';
     }
 }
