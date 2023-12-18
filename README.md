@@ -1,5 +1,8 @@
 # HiFresh
 
+
+Below are the patterns we felt best fit the project description and inputs.
+
 ## Gang of Four Patterns
 
 ### Composite
@@ -30,3 +33,6 @@ Dependency inversion principle:
 - We depend on the highest abstractions of `RecipeService` and `RecipeRepository` (both interfaces). The implementation of the interfaces that is used will depend on the Spring profile. 
 - We also apply this pattern when handling `Recipes`/`RecipeComponents`/`CompositeRecipes`. `RecipeComponent` is the highest level of abstraction of all three classes, so controller/service/repository methodds depend on `RecipeComponent` in almost all methods (unless a method of `CompositeRecipe` needs to be accessible).
 
+## Tests
+
+Execute tests outlined in the feature files by running `/test/java/hifresh/RunCucumberTest`
