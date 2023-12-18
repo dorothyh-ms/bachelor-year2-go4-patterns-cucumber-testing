@@ -41,13 +41,13 @@ public class RecipeRepositoryListImpl implements RecipeRepository{
     @Override
     public void addStepToRecipe(int recipeId, String stepDescription) {
         RecipeComponent recipe = findById(recipeId);
-        recipe.getSteps().add(new Step(stepDescription));
+        recipe.addStep(new Step(stepDescription));
     }
 
     @Override
     public void addStepToRecipe(int recipeId, String stepDescription, int indexToInsert) {
         RecipeComponent recipe = findById(recipeId);
-        recipe.getSteps().add(indexToInsert-1, new Step(stepDescription));
+        recipe.addStep(indexToInsert-1, new Step(stepDescription));
     }
 
     @Override

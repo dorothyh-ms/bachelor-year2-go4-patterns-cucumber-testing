@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hifresh.RunCucumberTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-12-18T21:57:59" hostname="DORA-LAPTOP" time="2.587">
+<testsuite name="hifresh.RunCucumberTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-12-18T22:47:26" hostname="DORA-LAPTOP" time="2.308">
   <properties/>
-  <testcase name="Add a recipe - Add recipe" classname="hifresh.RunCucumberTest" time="2.408"/>
-  <testcase name="Add a recipe - Add recipe with subrecipe" classname="hifresh.RunCucumberTest" time="0.045"/>
-  <testcase name="Add a recipe - Add a step to a recipe" classname="hifresh.RunCucumberTest" time="0.042"/>
-  <testcase name="Add a recipe - Insert a step into a recipe" classname="hifresh.RunCucumberTest" time="0.03"/>
-  <testcase name="Calculate cost of a recipe - Calculate price of a recipe on a given date  #DONE see calculaterecipecost.xslx" classname="hifresh.RunCucumberTest" time="0.028"/>
-  <testcase name="Calculate cost of a recipe - Calculate the price of a recipe with a subrecipe on a given date # MVP: suppose subrecipe is of exact quantity needed" classname="hifresh.RunCucumberTest" time="0.029"/>
-  <system-out><![CDATA[22:57:59.476 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:57:59.579 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
+  <testcase name="Add a recipe - Add recipe" classname="hifresh.RunCucumberTest" time="2.125"/>
+  <testcase name="Add a recipe - Add recipe with subrecipe" classname="hifresh.RunCucumberTest" time="0.042"/>
+  <testcase name="Add a recipe - Add a step to a recipe" classname="hifresh.RunCucumberTest" time="0.037"/>
+  <testcase name="Add a recipe - Insert a step into a recipe" classname="hifresh.RunCucumberTest" time="0.034"/>
+  <testcase name="Calculate cost of a recipe - Calculate price of a recipe on a given date  #DONE see calculaterecipecost.xslx" classname="hifresh.RunCucumberTest" time="0.033"/>
+  <testcase name="Calculate cost of a recipe - Calculate the price of a recipe with a subrecipe on a given date # MVP: suppose subrecipe is of exact quantity needed" classname="hifresh.RunCucumberTest" time="0.028"/>
+  <system-out><![CDATA[23:47:26.606 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:47:26.711 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -18,9 +18,9 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-12-18T22:58:00.015+01:00  INFO 33232 --- [    Test worker] hifresh.CucumberIntegrationTest          : Starting CucumberIntegrationTest using Java 17 with PID 33232 (started by Dora Sperling in C:\Users\Dora Sperling\IdeaProjects\programming4\HiFresh)
-2023-12-18T22:58:00.017+01:00  INFO 33232 --- [    Test worker] hifresh.CucumberIntegrationTest          : No active profile set, falling back to 1 default profile: "default"
-2023-12-18T22:58:00.648+01:00  INFO 33232 --- [    Test worker] hifresh.CucumberIntegrationTest          : Started CucumberIntegrationTest in 0.902 seconds (process running for 2.679)
+2023-12-18T23:47:27.085+01:00  INFO 32888 --- [    Test worker] hifresh.CucumberIntegrationTest          : Starting CucumberIntegrationTest using Java 17 with PID 32888 (started by Dora Sperling in C:\Users\Dora Sperling\IdeaProjects\programming4\HiFresh)
+2023-12-18T23:47:27.086+01:00  INFO 32888 --- [    Test worker] hifresh.CucumberIntegrationTest          : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T23:47:27.680+01:00  INFO 32888 --- [    Test worker] hifresh.CucumberIntegrationTest          : Started CucumberIntegrationTest in 0.843 seconds (process running for 2.532)
 
 Scenario: Add recipe                                                                                                                                                                    ?[90m# hifresh/AddRecipe.feature:97?[0m
   ?[32mGiven ?[0m?[32mrecipes?[0m                                                                                                                                                                         ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
@@ -98,8 +98,8 @@ Scenario: Add recipe                                                            
   ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m5?[0m?[32m with description ?[0m?[32m?[1m"Season with salt and black pepper to taste"?[0m                                                                             ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
   ?[32mThen ?[0m?[32mrecipe ?[0m?[32m?[1m5?[0m?[32m should have ?[0m?[32m?[1m2?[0m?[32m ingredients and ?[0m?[32m?[1m5?[0m?[32m preparation steps?[0m                                                                                                                       ?[90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationSteps(int,int,int)?[0m
   ?[32mAnd ?[0m?[32mpreparation step ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Chop the tomatoes"?[0m                                                                                                                                         ?[90m# hifresh.AddRecipeSteps.preparationStepIs(int,java.lang.String)?[0m
-2023-12-18T22:58:01.784+01:00  INFO 33232 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-12-18T22:58:01.788+01:00  INFO 33232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
+2023-12-18T23:47:28.616+01:00  INFO 32888 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-18T23:47:28.620+01:00  INFO 32888 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
 
 Scenario: Add recipe with subrecipe                                                                                                         ?[90m# hifresh/AddRecipe.feature:128?[0m
   ?[32mGiven ?[0m?[32mrecipes?[0m                                                                                                                             ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
@@ -178,8 +178,8 @@ Scenario: Add recipe with subrecipe                                             
   ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m6?[0m?[32m with description ?[0m?[32m?[1m"Grate the cheese and sprinkle it over the spaghetti"?[0m                        ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
   ?[32mAnd ?[0m?[32mI append a preparation step to recipe ?[0m?[32m?[1m6?[0m?[32m with description ?[0m?[32m?[1m"Put in the oven for 10 minutes"?[0m                                             ?[90m# hifresh.AddRecipeSteps.iAppendAPreparationStepToRecipeWithDescription(int,java.lang.String)?[0m
   ?[32mThen ?[0m?[32mrecipe ?[0m?[32m?[1m6?[0m?[32m should have ?[0m?[32m?[1m3?[0m?[32m ingredients and ?[0m?[32m?[1m5?[0m?[32m preparation steps and ?[0m?[32m?[1m1?[0m?[32m subrecipe?[0m                                                           ?[90m# hifresh.AddRecipeSteps.recipeShouldHaveIngredientsAndPreparationStepsAndSubrecipe(int,int,int,int)?[0m
-2023-12-18T22:58:01.829+01:00  INFO 33232 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-12-18T22:58:01.831+01:00  INFO 33232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
+2023-12-18T23:47:28.660+01:00  INFO 32888 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-18T23:47:28.662+01:00  INFO 32888 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
 
 Scenario: Add a step to a recipe                            ?[90m# hifresh/AddRecipe.feature:146?[0m
   ?[32mGiven ?[0m?[32mrecipes?[0m                                             ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
@@ -250,8 +250,8 @@ Scenario: Add a step to a recipe                            ?[90m# hifresh/AddRe
   ?[32mWhen ?[0m?[32mi add a step ?[0m?[32m?[1m"Serve hot"?[0m?[32m to recipe ?[0m?[32m?[1m1?[0m                 ?[90m# hifresh.AddRecipeSteps.iAddAStepToRecipe(java.lang.String,int)?[0m
   ?[32mThen ?[0m?[32mthe recipe has ?[0m?[32m?[1m3?[0m?[32m steps?[0m                               ?[90m# hifresh.AddRecipeSteps.theRecipeHasSteps(int)?[0m
   ?[32mAnd ?[0m?[32mthe last step of recipe ?[0m?[32m?[1m1?[0m?[32m has description ?[0m?[32m?[1m"Serve hot"?[0m ?[90m# hifresh.AddRecipeSteps.theLastStepOfRecipeHasDescription(int,java.lang.String)?[0m
-2023-12-18T22:58:01.872+01:00  INFO 33232 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-12-18T22:58:01.874+01:00  INFO 33232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
+2023-12-18T23:47:28.702+01:00  INFO 32888 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-18T23:47:28.705+01:00  INFO 32888 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
 
 Scenario: Insert a step into a recipe                               ?[90m# hifresh/AddRecipe.feature:151?[0m
   ?[32mGiven ?[0m?[32mrecipes?[0m                                                     ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
@@ -324,8 +324,8 @@ Scenario: Insert a step into a recipe                               ?[90m# hifre
   ?[32mAnd ?[0m?[32mstep ?[0m?[32m?[1m1?[0m?[32m for recipe ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Grate the cheese"?[0m                     ?[90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)?[0m
   ?[32mAnd ?[0m?[32mstep ?[0m?[32m?[1m2?[0m?[32m for recipe ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Add the cheese to the bechamel sauce"?[0m ?[90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)?[0m
   ?[32mAnd ?[0m?[32mstep ?[0m?[32m?[1m3?[0m?[32m for recipe ?[0m?[32m?[1m3?[0m?[32m is ?[0m?[32m?[1m"Heat gently for 5 minutes"?[0m            ?[90m# hifresh.AddRecipeSteps.stepForRecipeIs(int,int,java.lang.String)?[0m
-2023-12-18T22:58:01.903+01:00  INFO 33232 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-12-18T22:58:01.905+01:00  INFO 33232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
+2023-12-18T23:47:28.737+01:00  INFO 32888 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-18T23:47:28.739+01:00  INFO 32888 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
 
 Scenario: Calculate price of a recipe on a given date  #DONE see calculaterecipecost.xslx ?[90m# hifresh/CalculateCostOfARecipe.feature:80?[0m
   ?[32mGiven ?[0m?[32mrecipes?[0m                                                                           ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
@@ -391,8 +391,8 @@ Scenario: Calculate price of a recipe on a given date  #DONE see calculaterecipe
     | 18        | 6           | 0.00145 | 80000       | MILILITRE | 2024-03-01 | 2024-03-31 |
   ?[32mGiven ?[0m?[32mthe date is ?[0m?[32m?[1m2024?[0m?[32m-?[0m?[32m?[1m03?[0m?[32m-?[0m?[32m?[1m15?[0m                                                            ?[90m# hifresh.CalculateCostOfARecipeSteps.theDateIs(int,int,int)?[0m
   ?[32mThen ?[0m?[32mthe average cost of recipe ?[0m?[32m?[1m4?[0m?[32m is ?[0m?[32m?[1m0.912?[0m                                              ?[90m# hifresh.CalculateCostOfARecipeSteps.theAverageCostOfRecipeIs(int,double)?[0m
-2023-12-18T22:58:01.933+01:00  INFO 33232 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-12-18T22:58:01.937+01:00  INFO 33232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
+2023-12-18T23:47:28.773+01:00  INFO 32888 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hifresh.CucumberIntegrationTest]: CucumberIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-18T23:47:28.777+01:00  INFO 32888 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hifresh.Main for test class hifresh.CucumberIntegrationTest
 
 Scenario: Calculate the price of a recipe with a subrecipe on a given date # MVP: suppose subrecipe is of exact quantity needed ?[90m# hifresh/CalculateCostOfARecipe.feature:84?[0m
   ?[32mGiven ?[0m?[32mrecipes?[0m                                                                                                                 ?[90m# hifresh.AddRecipeSteps.recipes(io.cucumber.datatable.DataTable)?[0m
