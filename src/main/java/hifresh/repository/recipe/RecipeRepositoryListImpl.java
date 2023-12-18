@@ -28,17 +28,7 @@ public class RecipeRepositoryListImpl implements RecipeRepository{
         return recipeComponent;
     }
 
-    @Override
-    public void update(RecipeComponent compositeRecipe) {
-//        CompositeRecipe recipeToUpdate = compositeRecipeList.stream().filter(r -> r.getId() == compositeRecipe.getId()).findFirst().get();
-//        recipeToUpdate.setDescription(compositeRecipe.getDescription());
-//        recipeToUpdate.setName(compositeRecipe.getName());
-//        recipeToUpdate.setPicture(compositeRecipe.getPicture());
-//        recipeToUpdate.
-//        compositeRecipe.clearSubRecipes();
-//        compositeRecipe.getSubRecipes().forEach(recipeToUpdate::addSubRecipe);
 
-    }
 
     public CompositeRecipe findCompositeRecipeById(int id) {
         RecipeComponent foundComponent = findById(id);
@@ -65,6 +55,13 @@ public class RecipeRepositoryListImpl implements RecipeRepository{
         RecipeComponent recipe = findById(recipeId);
         recipe.addIngredient(ingredient);
         ingredient.setRecipe(recipe);
+    }
+
+    @Override
+    public void addSubRecipeToRecipe(int subRecipeId, int recipeId) {
+        CompositeRecipe mainRecipe = findCompositeRecipeById(recipeId);
+        RecipeComponent subRecipe = findById(subRecipeId);
+        mainRecipe.addSubRecipe(subRecipe);
     }
 
     @Override

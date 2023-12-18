@@ -24,9 +24,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -192,7 +190,7 @@ public class AddRecipeSteps extends CucumberIntegrationTest{
 
     @And("I add ingredient {int} grammes {string} to recipe {int}")
     public void iAddIngredientGrammesToRecipe(int ingredientQuantity, String productName, int recipeId) {
-        recipeController.addIngredientToRecipe(ingredientQuantity, productName, recipeId);
+        recipeController.addIngredientToRecipe(recipeId, "GRAM", productName, ingredientQuantity);
     }
 
     @And("I append a preparation step to recipe {int} with description {string}")
@@ -203,8 +201,7 @@ public class AddRecipeSteps extends CucumberIntegrationTest{
 
     @Then("recipe {int} should have {int} ingredients and {int} preparation steps")
     public void recipeShouldHaveIngredientsAndPreparationSteps(int recipeId, int numberOfIngredients, int numberOfPreparationSteps) {
-        List<Ingredient> ingredients = ingredientRepository.findByRecipeId(recipeId);
-        RecipeComponent recipe = recipeRepository.findById(recipeId);
+        RecipeComponent recipe = recipeController.getRecipe(recipeId);
         int actualNumberOfIngredients = recipe.getIngredients().size();
         int actualNumberOfSteps = recipe.getSteps().size();
         assertEquals(numberOfIngredients, actualNumberOfIngredients, String.format("recipe with id %d should have %d ingredients but has %d %s", recipeId, numberOfIngredients, actualNumberOfIngredients, recipe.getIngredients()));
@@ -213,7 +210,7 @@ public class AddRecipeSteps extends CucumberIntegrationTest{
 
     @And("preparation step {int} is {string}")
     public void preparationStepIs(int stepNumber, String stepDescription) {
-        RecipeComponent compositeRecipe = recipeRepository.findById(currentRecipeId);
+        RecipeComponent compositeRecipe = recipeController.getRecipe(currentRecipeId);
         Step step = compositeRecipe.getSteps().get(stepNumber-1);
         String actualStepDescription = step.getDescription();
         assertEquals(stepDescription, actualStepDescription , String.format("preparation step should be %s but is %s", stepDescription, actualStepDescription));
@@ -227,7 +224,7 @@ public class AddRecipeSteps extends CucumberIntegrationTest{
     @Then("recipe {int} should have {int} ingredients and {int} preparation steps and {int} subrecipe")
     public void recipeShouldHaveIngredientsAndPreparationStepsAndSubrecipe(int recipeId, int numberOfIngredients, int numberOfSteps, int numberOfSubRecipes) {
 
-        CompositeRecipe compositeRecipe = recipeRepository.findCompositeRecipeById(recipeId);
+        CompositeRecipe compositeRecipe = recipeController.getCompositeRecipe(recipeId);
         int actualNumberOfSteps = compositeRecipe.getSteps().size();
         int actualNumberOfSubRecipes = compositeRecipe.getSubRecipes().size();
         int actualNumberOfIngredients = compositeRecipe.getIngredients().size();
@@ -239,38 +236,34 @@ public class AddRecipeSteps extends CucumberIntegrationTest{
     @When("i add a step {string} to recipe {int}")
     public void iAddAStepToRecipe(String stepDescription, int recipeId) {
         currentRecipeId = recipeId;
-        System.out.println(currentRecipeId);
         recipeController.addStepToRecipe(stepDescription, recipeId);
     }
 
     @Then("the recipe has {int} steps")
     public void theRecipeHasSteps(int numberOfSteps) {
-        RecipeComponent recipe = recipeRepository.findById(currentRecipeId);
-        assertNotNull(recipe, String.format("Recipe %d should not be null", currentRecipeId));
+        RecipeComponent recipe = recipeController.getRecipe(currentRecipeId);
         int actualNumberOfSteps = recipe.getSteps().size();
         assertEquals(numberOfSteps, actualNumberOfSteps, String.format("recipe %d should have %d steps but has %d steps", currentRecipeId, numberOfSteps, actualNumberOfSteps ));
     }
 
     @And("the last step of recipe {int} has description {string}")
     public void theLastStepOfRecipeHasDescription(int recipeId, String description) {
-        RecipeComponent recipe = recipeRepository.findById(recipeId);
+        RecipeComponent recipe = recipeController.getRecipe(recipeId);
         List<Step> steps = recipe.getSteps();
         String lastStepDescription = steps.get(steps.size()-1).getDescription();
         assertEquals(description, lastStepDescription, String.format("last step of compositeRecipe should have description %s but has description %s", description, lastStepDescription));
-
     }
 
     @When("I add a step  {string} to recipe {int} before step {int}")
     public void iAddAStepToRecipeBeforeStep(String stepDescription, int recipeId, int stepNumber) {
         currentRecipeId = recipeId;
-        recipeController.insertStepIntoRecipe(stepDescription, recipeId, stepNumber);
+        recipeController.insertStepIntoRecipeInOrder(stepDescription, recipeId, stepNumber);
     }
 
     @And("step {int} for recipe {int} is {string}")
     public void stepForRecipeIs(int stepNumber, int recipeId, String stepDescription) {
-        RecipeComponent recipe = recipeRepository.findById(recipeId);
+        RecipeComponent recipe = recipeController.getRecipe(recipeId);
         String actualDescription = recipe.getSteps().get(stepNumber-1).getDescription();
         assertEquals(stepDescription, actualDescription, String.format("recipe step %d should be %s but is %s", stepNumber, stepDescription, actualDescription));
     }
-
 }

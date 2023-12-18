@@ -20,10 +20,6 @@ public class ClauseRepositoryListImpl implements ClauseRepository{
         return clause.orElse(null);
     }
 
-    @Override
-    public void update(Clause clause) {
-
-    }
 
     @Override
     public Clause save(Clause clause) {

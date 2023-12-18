@@ -27,10 +27,7 @@ public class ProductRepositoryListImpl implements ProductRepository{
         return product.orElse(null);
     }
 
-    @Override
-    public void update(Product product) {
 
-    }
 
     @Override
     public Product save(Product product) {

@@ -11,10 +11,7 @@ public class DistributionCenterRepositoryListImpl implements DistributionCenterR
     }
 
 
-    @Override
-    public void update(DistributionCenter distributionCenter) {
 
-    }
 
     @Override
     public DistributionCenter save(DistributionCenter distributionCenter) {

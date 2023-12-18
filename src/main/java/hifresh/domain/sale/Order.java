@@ -13,6 +13,7 @@ public class Order {
 
     private Transport transport;
 
+    private WeekOffer offer;
     private List<Meal> meals;
 
     private double getDiscount(){

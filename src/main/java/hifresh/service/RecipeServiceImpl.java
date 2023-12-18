@@ -60,9 +60,8 @@ public class RecipeServiceImpl implements RecipeService {
 
     @Override
     public void addSubRecipeToRecipe(int subRecipeId, int recipeId) {
-        CompositeRecipe mainRecipe = recipeRepository.findCompositeRecipeById(recipeId);
-        RecipeComponent subRecipe = recipeRepository.findById(subRecipeId);
-        mainRecipe.addSubRecipe(subRecipe);
+        recipeRepository.addSubRecipeToRecipe(subRecipeId, recipeId);
+
     }
 
     @Override
@@ -71,11 +70,12 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public void addIngredientToRecipe(int recipeId, String productName, int ingredientQuantity) {
+    public void addIngredientToRecipe(int recipeId, String ingredientUnit, String productName, double ingredientQuantity) {
         Product product = productRepository.findByName(productName);
-        Ingredient ingredient = new Ingredient(new Quantity(Unit.GRAM, ingredientQuantity), product);
-        ingredientRepository.save(ingredient);
+        Unit unit = Unit.valueOf(ingredientUnit);
+        Ingredient ingredient = new Ingredient(new Quantity(unit, ingredientQuantity), product);
         recipeRepository.addIngredientToRecipe(recipeId, ingredient);
+        ingredientRepository.save(ingredient);
     }
 
 
@@ -86,4 +86,13 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
 
+    @Override
+    public RecipeComponent getRecipeById(int recipeId) {
+        return recipeRepository.findById(recipeId);
+    }
+
+    @Override
+    public CompositeRecipe getCompositeRecipeById(int recipeId) {
+        return recipeRepository.findCompositeRecipeById(recipeId);
+    }
 }

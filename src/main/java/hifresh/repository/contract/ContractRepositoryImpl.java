@@ -22,10 +22,7 @@ public class ContractRepositoryImpl implements ContractRepository{
     }
 
 
-    @Override
-    public void update(Contract contract) {
 
-    }
 
     @Override
     public Contract save(Contract contract) {

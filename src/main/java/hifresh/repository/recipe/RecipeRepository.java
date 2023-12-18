@@ -13,4 +13,5 @@ public interface RecipeRepository extends Repository<RecipeComponent> {
     void addIngredientToRecipe(int recipeId, Ingredient ingredient);
     public CompositeRecipe findCompositeRecipeById(int recipeId);
 
+    void addSubRecipeToRecipe(int subRecipeId, int recipeId);
 }

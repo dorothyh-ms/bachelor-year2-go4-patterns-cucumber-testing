@@ -44,10 +44,8 @@ public class CompositeRecipe extends RecipeComponent{
     @Override
     public double calculateCost(LocalDate date) {
         double cost = 0;
-        System.out.println("running calculateCost");
         for (RecipeComponent recipeComponent : subRecipes){
             double recipeCost = recipeComponent.calculateCost(date);
-            System.out.println(recipeCost);
             cost += recipeCost;
         }
         cost += pricingStrategy.calculateCost(this, date);

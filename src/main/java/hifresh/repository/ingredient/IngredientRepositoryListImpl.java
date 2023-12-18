@@ -21,10 +21,6 @@ public class IngredientRepositoryListImpl implements IngredientRepository {
         return ingredients.stream().filter(i -> i.getRecipe().getId() == recipeId).collect(Collectors.toList());
     }
 
-    @Override
-    public void update(Ingredient ingredient) {
-
-    }
 
     @Override
     public Ingredient save(Ingredient ingredient) {

@@ -12,7 +12,7 @@ public interface RecipeService {
 
     void addStepToRecipeAtIndex(int recipeId, String stepDescription, int indexToInsert);
 
-    void addIngredientToRecipe(int recipeId, String ingredientDescription, int ingredientQuantity);
+    void addIngredientToRecipe(int recipeId, String ingredientUnit, String productName, double ingredientQuantity);
 
 
 
@@ -21,4 +21,8 @@ public interface RecipeService {
     void addSubRecipeToRecipe(int subRecipeId, int recipeId);
 
     void setPricingStrategy(int recipeId, String type);
+
+    RecipeComponent getRecipeById(int recipeId);
+
+    CompositeRecipe getCompositeRecipeById(int recipeId);
 }
