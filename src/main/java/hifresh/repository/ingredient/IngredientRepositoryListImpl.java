@@ -1,6 +1,7 @@
 package hifresh.repository.ingredient;
 
 import hifresh.domain.recipe.Ingredient;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,9 +9,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Repository
+@Profile(value = {"listrepo"})
 public class IngredientRepositoryListImpl implements IngredientRepository {
 
-    private final List<Ingredient> ingredients = new ArrayList<>();
+    private final List<Ingredient> ingredientList = new ArrayList<>();
     @Override
     public Ingredient findById(int id) {
         return null;
@@ -18,24 +20,24 @@ public class IngredientRepositoryListImpl implements IngredientRepository {
 
     @Override
     public List<Ingredient> findByRecipeId(int recipeId) {
-        return ingredients.stream().filter(i -> i.getRecipe().getId() == recipeId).collect(Collectors.toList());
+        return ingredientList.stream().filter(i -> i.getRecipe().getId() == recipeId).collect(Collectors.toList());
     }
 
 
     @Override
     public Ingredient save(Ingredient ingredient) {
         if (ingredient.getId() == 0){ // if id not set
-            ingredient.setId(ingredients.stream()
+            ingredient.setId(ingredientList.stream()
                     .mapToInt(Ingredient::getId)
                     .max()
                     .orElse(1));
         }
-        ingredients.add(ingredient);
+        ingredientList.add(ingredient);
         return ingredient;
     }
 
     @Override
     public void clear() {
-        ingredients.clear();
+        ingredientList.clear();
     }
 }
