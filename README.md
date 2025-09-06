@@ -1,5 +1,5 @@
 # HiFresh
-
+This repository is for a project that tests our ability to apply Gang of 4 software design patterns to a business case "HiFresh", a fictious service that sends recipe boxes with ingredients to make meals to subscribers.
 
 Below are the patterns we felt best fit the project description and inputs.
 
